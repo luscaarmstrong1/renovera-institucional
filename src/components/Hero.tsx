@@ -1,153 +1,303 @@
-"use client";
-
-import React, { useEffect, useRef } from "react";
-import Link from "next/link";
+import React from "react";
 import Image from "next/image";
-import { companyConfig } from "@/config/company";
-import { ArrowRight, ShieldCheck, Zap, FileText, CheckCircle2 } from "lucide-react";
-import gsap from "gsap";
+import { SITE, SOCIAL_LINKS } from "@/config/site";
+import { ActionButton } from "./icons";
+import { Marquee } from "./Marquee";
 
 export function Hero() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const headlineRef = useRef<HTMLHeadingElement>(null);
-  const subtitleRef = useRef<HTMLParagraphElement>(null);
-  const ctaRef = useRef<HTMLDivElement>(null);
-  const badgeRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-      tl.from(badgeRef.current, {
-        opacity: 0,
-        y: -15,
-        duration: 0.6
-      })
-        .from(
-          headlineRef.current,
-          {
-            opacity: 0,
-            y: 25,
-            duration: 0.8
-          },
-          "-=0.3"
-        )
-        .from(
-          subtitleRef.current,
-          {
-            opacity: 0,
-            y: 20,
-            duration: 0.7
-          },
-          "-=0.4"
-        )
-        .from(
-          ctaRef.current,
-          {
-            opacity: 0,
-            y: 15,
-            duration: 0.6
-          },
-          "-=0.3"
-        );
-    }, heroRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <section
-      ref={heroRef}
-      className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-20 engineering-grid text-white overflow-hidden"
-    >
-      {/* Elementos Gráficos de Fundo: Malha e Geometria Elétrica */}
-      <div className="absolute inset-0 pointer-events-none opacity-30">
-        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="grid-pattern" width="60" height="60" patternUnits="userSpaceOnUse">
-              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(254, 209, 93, 0.08)" strokeWidth="1" />
-              <circle cx="0" cy="0" r="1.5" fill="rgba(254, 209, 93, 0.2)" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#grid-pattern)" />
-        </svg>
+    <section data-load-stage="" data-inertia="" className="stage">
+      <div className="stage-overlay" />
+      <div className="stage-container">
+        <div className="stage-inner">
+          <div className="stage-content">
+            <div className="stage-logo">
+              <div data-load-stage-logo="" className="stage-logo-svg flex items-center justify-center">
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-xl bg-[#033118] border border-[#FED15D] p-2 flex items-center justify-center shadow-lg">
+                    <Image
+                      src="/assets/brand/favicon.svg"
+                      alt="Renovera Energias Renováveis"
+                      width={44}
+                      height={44}
+                      className="object-contain"
+                      priority
+                    />
+                  </div>
+                  <div className="flex flex-col text-left">
+                    <span className="text-3xl sm:text-4xl font-bold tracking-tight text-white font-display">
+                      RENOVERA
+                    </span>
+                    <span className="text-xs uppercase tracking-widest text-[#FED15D] font-semibold">
+                      Energias Renováveis
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-load-stage-cta=""
+              className="stage-cta"
+              style={{ display: "flex", gap: "1em", flexWrap: "wrap", justifyContent: "center" }}
+            >
+              <ActionButton
+                href="#projetos"
+                label="Explorar nossas soluções"
+                variant="dark"
+              />
+              <ActionButton
+                href="#contato"
+                label="Falar com a Renovera"
+                variant="white"
+              />
+            </div>
+            <div className="stage-wrap">
+              <div className="stage-left">
+                <div className="stage-deco">
+                  <div
+                    data-load-stage-deco-text=""
+                    style={{ "--animation-delay": ".05s" } as React.CSSProperties}
+                    className="stage-deco-text-wrap"
+                  >
+                    <svg
+                      viewBox="0 0 320 112"
+                      width={320}
+                      height={112}
+                      className="stage-deco-text"
+                      aria-hidden="true"
+                      overflow="visible"
+                    >
+                      <g
+                        transform="rotate(-6 160 56)"
+                        fill="currentColor"
+                        style={{ fontFamily: "var(--font-mao)" }}
+                        fontSize={36}
+                      >
+                        <text x={0} y={45}>
+                          Engenharia &amp; Energia
+                        </text>
+                        <text x={18} y={90}>
+                          Visão Integrada
+                        </text>
+                      </g>
+                    </svg>
+                    <svg
+                      viewBox="0 0 320 112"
+                      width={320}
+                      height={112}
+                      className="stage-deco-text is-wiggle"
+                      aria-hidden="true"
+                      overflow="visible"
+                    >
+                      <g
+                        transform="rotate(-6 160 56)"
+                        fill="currentColor"
+                        style={{ fontFamily: "var(--font-mao)" }}
+                        fontSize={36}
+                      >
+                        <text x={0} y={45}>
+                          Engenharia &amp; Energia
+                        </text>
+                        <text x={18} y={90}>
+                          Visão Integrada
+                        </text>
+                      </g>
+                    </svg>
+                  </div>
+                  <div
+                    data-load-stage-deco-arrow=""
+                    style={{ "--animation-delay": ".15s" } as React.CSSProperties}
+                    className="stage-deco-arrow-wrap"
+                  >
+                    <svg
+                      viewBox="0 0 150 150"
+                      width={150}
+                      height={150}
+                      className="stage-deco-arrow"
+                      aria-hidden="true"
+                      fill="none"
+                    >
+                      <path
+                        d="M30 14C12 48 18 98 62 122M62 122C58 108 50 100 40 96M62 122C48 124 38 130 32 140"
+                        stroke="currentColor"
+                        strokeWidth={3.2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <svg
+                      viewBox="0 0 150 150"
+                      width={150}
+                      height={150}
+                      className="stage-deco-arrow is-wiggle"
+                      aria-hidden="true"
+                      fill="none"
+                    >
+                      <path
+                        d="M30 14C12 48 18 98 62 122M62 122C58 108 50 100 40 96M62 122C48 124 38 130 32 140"
+                        stroke="currentColor"
+                        strokeWidth={3.2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div className="stage-photo-wrapper">
+                  <div data-load-stage-img="" className="stage-photo">
+                    <img
+                      src="/assets/images/solar-engineering.webp"
+                      alt="Renovera Energias Renováveis - Engenharia e Usinas Solares"
+                      width={572}
+                      height={760}
+                      className="stage-img"
+                      style={{ objectFit: "cover", borderRadius: "12px" }}
+                    />
+                  </div>
+                </div>
+                <div className="stage-facts">
+                  <div data-inertia-item="" className="stage-fact-outer">
+                    <div
+                      data-load-stage-fact=""
+                      data-inertia-item-child=""
+                      className="stage-fact is-first"
+                    >
+                      <div className="stage-fact-wrap">
+                        <div className="stage-fact-number">MMGD</div>
+                      </div>
+                      <div className="stage-fact-text">Consultoria e Conexão</div>
+                    </div>
+                  </div>
+                  <div data-inertia-item="" className="stage-fact-outer">
+                    <div
+                      data-load-stage-fact=""
+                      data-inertia-item-child=""
+                      className="stage-fact is-second"
+                    >
+                      <div className="stage-fact-wrap">
+                        <div className="stage-fact-number">MT &amp; BT</div>
+                      </div>
+                      <div className="stage-fact-text">Projetos e Subestações</div>
+                    </div>
+                  </div>
+                  <div data-inertia-item="" className="stage-fact-outer">
+                    <div
+                      data-load-stage-fact=""
+                      data-inertia-item-child=""
+                      className="stage-fact is-third"
+                    >
+                      <div className="stage-fact-wrap">
+                        <div className="stage-fact-number">100</div>
+                        <div className="stage-fact-unit">%</div>
+                      </div>
+                      <div className="stage-fact-text">Rigor Normativo ANEEL</div>
+                    </div>
+                  </div>
+                  <div data-inertia-item="" className="stage-fact-outer">
+                    <div
+                      data-load-stage-fact=""
+                      data-inertia-item-child=""
+                      className="stage-fact is-fourth"
+                    >
+                      <div className="stage-fact-wrap">
+                        <div className="stage-fact-number">22-120</div>
+                        <div className="stage-fact-unit">kW</div>
+                      </div>
+                      <div className="stage-fact-text">Recarga Elétrica VE</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="stage-bg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="100%"
+                    viewBox="0 0 731 818"
+                    fill="none"
+                    data-load-stage-svg=""
+                    className="stage-bg-svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M542.941 42.7702C707.951 122.986 766.918 351.375 667.592 555.698C568.265 760.021 352.233 854.727 187.223 774.512C22.2122 694.296 -36.7556 465.905 62.5711 261.582C161.898 57.2593 377.93 -37.4456 542.941 42.7702Z"
+                      stroke="currentColor"
+                      strokeWidth="28"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div className="stage-right">
+                <div className="stage-text-wrap">
+                  <div
+                    style={{
+                      fontSize: "1.2em",
+                      letterSpacing: "0.08em",
+                      textTransform: "uppercase",
+                      color: "var(--color-gold-accent)",
+                      fontWeight: 600,
+                    }}
+                  >
+                    RENOVERA ENERGIAS RENOVÁVEIS • ENGENHARIA ELÉTRICA &amp; REGULAÇÃO
+                  </div>
+                  <h1 data-load-stage-title="" className="hero-heading">
+                    <span className="white-span">Engenharia,</span>
+                    <br />
+                    energia e
+                    <br />
+                    soluções integradas.
+                  </h1>
+                  <div className="stage-paragraph-wrap">
+                    <p
+                      data-load-stage-text=""
+                      className="paragraph is-stage-paragraph"
+                    >
+                      Soluções especializadas em engenharia elétrica, projetos fotovoltaicos, consultoria regulatória, automação e infraestrutura energética.
+                    </p>
+                    <div
+                      data-load-stage-underline=""
+                      style={{ "--animation-delay": ".2s" } as React.CSSProperties}
+                      className="stage-subline-wrap"
+                    >
+                      <svg
+                        viewBox="0 0 152 42"
+                        width={152}
+                        height={42}
+                        className="subline-img"
+                        aria-hidden="true"
+                        fill="none"
+                      >
+                        <path
+                          d="M4 30C30 22 62 20 92 22C112 23 128 26 148 18M30 36C56 32 84 32 112 34"
+                          stroke="currentColor"
+                          strokeWidth={4}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <svg
+                        viewBox="0 0 152 42"
+                        width={152}
+                        height={42}
+                        className="subline-img is-wiggle"
+                        aria-hidden="true"
+                        fill="none"
+                      >
+                        <path
+                          d="M4 30C30 22 62 20 92 22C112 23 128 26 148 18M30 36C56 32 84 32 112 34"
+                          stroke="currentColor"
+                          strokeWidth={4}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      {/* Brilho Suave Sazonal de Energia Solar */}
-      <div className="absolute top-1/4 right-10 w-96 h-96 bg-[#FED15D]/5 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-        {/* Badge Superior */}
-        <div ref={badgeRef} className="inline-block mb-6">
-          <span className="badge-renovera">
-            <Zap className="w-3.5 h-3.5 text-[#FED15D]" />
-            Engenharia Elétrica & Consultoria Regulatória
-          </span>
-        </div>
-
-        {/* Headline Monumental Corporativa */}
-        <h1
-          ref={headlineRef}
-          className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white max-w-5xl mx-auto leading-[1.08] font-display"
-        >
-          Engenharia que conecta soluções.{" "}
-          <span className="text-[#FED15D] block sm:inline">Energia que impulsiona resultados.</span>
-        </h1>
-
-        {/* Subtítulo */}
-        <p
-          ref={subtitleRef}
-          className="mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-normal leading-relaxed"
-        >
-          {companyConfig.description}
-        </p>
-
-        {/* Ações e CTAs */}
-        <div
-          ref={ctaRef}
-          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
-          <Link href="/solucoes" className="btn-primary text-sm sm:text-base px-8 py-3.5 w-full sm:w-auto">
-            Conheça Nossas Soluções
-            <ArrowRight className="w-4 h-4 ml-1.5" />
-          </Link>
-          <Link href="/contato" className="btn-secondary text-sm sm:text-base px-8 py-3.5 w-full sm:w-auto">
-            Fale com um Especialista
-          </Link>
-        </div>
-
-        {/* Pilares Institucionais Rápidos */}
-        <div className="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-left">
-          <div className="flex items-center gap-3">
-            <ShieldCheck className="w-6 h-6 text-[#FED15D] flex-shrink-0" />
-            <div>
-              <div className="text-xs font-bold uppercase tracking-wider text-white">Rigor Normativo</div>
-              <div className="text-[0.7rem] text-gray-400">PRODIST, ABNT e ANEEL</div>
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <Zap className="w-6 h-6 text-[#FED15D] flex-shrink-0" />
-            <div>
-              <div className="text-xs font-bold uppercase tracking-wider text-white">Média e Baixa Tensão</div>
-              <div className="text-[0.7rem] text-gray-400">Projetos e Subestações</div>
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <FileText className="w-6 h-6 text-[#FED15D] flex-shrink-0" />
-            <div>
-              <div className="text-xs font-bold uppercase tracking-wider text-white">Inversão de Fluxo</div>
-              <div className="text-[0.7rem] text-gray-400">Contestação Fundamentada</div>
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <CheckCircle2 className="w-6 h-6 text-[#FED15D] flex-shrink-0" />
-            <div>
-              <div className="text-xs font-bold uppercase tracking-wider text-white">Visão Integrada</div>
-              <div className="text-[0.7rem] text-gray-400">Do Estudo ao Comissionamento</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Marquee />
     </section>
   );
 }

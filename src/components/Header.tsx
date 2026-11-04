@@ -1,205 +1,246 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { navigationConfig } from "@/config/navigation";
-import { companyConfig } from "@/config/company";
-import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
+import { SITE, SOCIAL_LINKS } from "@/config/site";
+import { ActionButton, LinkedInIcon } from "./icons";
+
+const MOBILE_NAV_LINKS = [
+  { num: "01", href: "#sobre", label: "Sobre a Renovera" },
+  { num: "02", href: "#atuacao", label: "Áreas de Atuação" },
+  { num: "03", href: "#diferenca", label: "Abordagem Integrada" },
+  { num: "04", href: "#projetos", label: "Projetos de Engenharia" },
+  { num: "05", href: "#arquitetura", label: "Múltiplas Camadas" },
+  { num: "06", href: "#experiencia", label: "Metodologia & Rigor" },
+  { num: "07", href: "#contato", label: "Canais de Atendimento" },
+];
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleBtnRef = useRef<HTMLButtonElement | null>(null);
+  const firstLinkRef = useRef<HTMLAnchorElement | null>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 30);
+    window.dispatchEvent(new CustomEvent("rolagem:trava", { detail: menuOpen }));
+    if (menuOpen) {
+      document.body.classList.add("has-mobile-menu-open");
+      const timer = setTimeout(() => {
+        firstLinkRef.current?.focus({ preventScroll: true });
+      }, 60);
+      return () => clearTimeout(timer);
+    } else {
+      document.body.classList.remove("has-mobile-menu-open");
+    }
+  }, [menuOpen]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKeyDown = (ev: KeyboardEvent) => {
+      if (ev.key === "Escape") {
+        ev.preventDefault();
+        setMenuOpen(false);
+        toggleBtnRef.current?.focus({ preventScroll: true });
+      }
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    const onResize = () => {
+      if (window.innerWidth >= 992) {
+        setMenuOpen(false);
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("resize", onResize);
+    };
+  }, [menuOpen]);
 
-  // Fechar menu mobile ao trocar de rota
-  useEffect(() => {
-    setIsMobileMenuOpen(false);
-    setActiveDropdown(null);
-  }, [pathname]);
-
-  const isDarkHero = pathname === "/" || pathname.startsWith("/solucoes/");
+  const handleNavClick = () => {
+    setMenuOpen(false);
+  };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-[#022417]/95 backdrop-blur-md border-b border-[#FED15D]/20 py-3 shadow-lg"
-          : isDarkHero
-          ? "bg-transparent py-5 border-b border-white/10"
-          : "bg-white/95 backdrop-blur-md py-4 border-b border-[#DFE7E3] shadow-sm"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Logotipo Oficial */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 flex-shrink-0 bg-[#033118] border border-[#FED15D]/40 rounded-lg p-1.5 flex items-center justify-center">
-            <Image
-              src="/assets/brand/favicon.svg"
-              alt="Ícone Renovera"
-              width={28}
-              height={28}
-              className="object-contain"
-              priority
+    <div data-load-nav="" role="banner" className="navbar w-nav">
+      <div className="nav-container">
+        <div className="grid-layout">
+          <div
+            id="w-node-_084a53a4-1315-9fde-31ee-e99a4811c28c-4811c289"
+            className="nav-social-media-inner"
+          >
+            <a
+              href="#"
+              className="social-media-link w-inline-block flex items-center gap-2"
+              aria-label="Renovera Energias Renováveis - Início"
+            >
+              <div className="w-8 h-8 rounded-full bg-[#033118] border border-[#FED15D]/40 p-1 flex items-center justify-center">
+                <Image
+                  src="/assets/brand/favicon.svg"
+                  alt="Renovera"
+                  width={20}
+                  height={20}
+                  className="object-contain"
+                />
+              </div>
+            </a>
+            <a
+              href={SOCIAL_LINKS.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-media-link w-inline-block"
+              aria-label="LinkedIn Corporativo Renovera"
+            >
+              <div className="social-media-circle">
+                <LinkedInIcon />
+              </div>
+            </a>
+          </div>
+          <nav
+            id="w-node-_084a53a4-1315-9fde-31ee-e99a4811c293-4811c289"
+            className="nav-link-inner"
+            aria-label="Seções institucionais"
+          >
+            <a href="#sobre" className="nav-link w-inline-block">
+              <div className="nav-text">Sobre</div>
+            </a>
+            <a href="#atuacao" className="nav-link w-inline-block">
+              <div className="nav-text">Atuação</div>
+            </a>
+            <a href="#projetos" className="nav-link w-inline-block">
+              <div className="nav-text">Projetos</div>
+            </a>
+            <a href="#experiencia" className="nav-link w-inline-block">
+              <div className="nav-text">Metodologia</div>
+            </a>
+            <a href="#contato" className="nav-link w-inline-block">
+              <div className="nav-text">Contato</div>
+            </a>
+          </nav>
+          <div
+            id="w-node-c4e2d712-b9aa-e56d-102b-73576293bdd9-4811c289"
+            className="nav-actions-right"
+          >
+            <ActionButton
+              href="#contato"
+              label="Fale com a Renovera"
+              variant="white"
             />
-          </div>
-          <div className="flex flex-col">
-            <span
-              className={`text-xl font-bold tracking-tight font-display transition-colors ${
-                isScrolled || isDarkHero ? "text-white" : "text-[#033118]"
-              }`}
+            <button
+              ref={toggleBtnRef}
+              type="button"
+              className={`mobile-menu-toggle${menuOpen ? " is-open" : ""}`}
+              aria-expanded={menuOpen}
+              aria-controls="mobile-nav-drawer"
+              aria-label={
+                menuOpen
+                  ? "Fechar menu de navegação"
+                  : "Abrir menu de navegação"
+              }
+              onClick={() => setMenuOpen((prev) => !prev)}
             >
-              RENOVERA
-            </span>
-            <span
-              className={`text-[0.65rem] tracking-wider uppercase font-semibold ${
-                isScrolled || isDarkHero ? "text-[#FED15D]" : "text-[#0A4B2D]"
-              }`}
-            >
-              Energias Renováveis
-            </span>
+              <span className="mobile-menu-toggle-bars" aria-hidden="true">
+                <span className="bar bar-1" />
+                <span className="bar bar-2" />
+                <span className="bar bar-3" />
+              </span>
+              <span className="mobile-menu-toggle-label">Menu</span>
+            </button>
           </div>
-        </Link>
-
-        {/* Navegação Desktop */}
-        <nav className="hidden md:flex items-center gap-7">
-          {navigationConfig.map((item) => {
-            const isActive = pathname === item.href;
-            const hasChildren = item.children && item.children.length > 0;
-
-            if (hasChildren) {
-              return (
-                <div
-                  key={item.label}
-                  className="relative group"
-                  onMouseEnter={() => setActiveDropdown(item.label)}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                >
-                  <Link
-                    href={item.href}
-                    className={`inline-flex items-center gap-1.5 text-sm font-medium py-2 transition-colors ${
-                      isScrolled || isDarkHero
-                        ? "text-gray-200 hover:text-[#FED15D]"
-                        : "text-[#17221F] hover:text-[#033118]"
-                    } ${isActive ? "text-[#FED15D] font-semibold" : ""}`}
-                  >
-                    {item.label}
-                    <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
-                  </Link>
-
-                  {/* Dropdown Menu */}
-                  {activeDropdown === item.label && (
-                    <div className="absolute top-full left-0 w-80 bg-[#022417] border border-[#FED15D]/30 rounded-lg shadow-2xl p-2.5 mt-1 animate-in fade-in slide-in-from-top-2 duration-200">
-                      {item.children?.map((sub) => (
-                        <Link
-                          key={sub.href}
-                          href={sub.href}
-                          className="block p-2.5 rounded-md hover:bg-white/5 transition-colors group/sub"
-                        >
-                          <div className="text-sm font-semibold text-white group-hover/sub:text-[#FED15D]">
-                            {sub.label}
-                          </div>
-                          {sub.description && (
-                            <div className="text-xs text-gray-400 mt-0.5 line-clamp-1">
-                              {sub.description}
-                            </div>
-                          )}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            }
-
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`text-sm font-medium transition-colors ${
-                  isScrolled || isDarkHero
-                    ? "text-gray-200 hover:text-[#FED15D]"
-                    : "text-[#17221F] hover:text-[#033118]"
-                } ${isActive ? (isDarkHero || isScrolled ? "text-[#FED15D] font-semibold" : "text-[#033118] font-bold") : ""}`}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
-
-        {/* CTA do Header */}
-        <div className="hidden md:flex items-center gap-4">
-          <Link
-            href="/contato"
-            className="btn-primary text-xs uppercase tracking-wider py-2 px-4 shadow-sm"
-          >
-            Fale com a Renovera
-            <ArrowRight className="w-3.5 h-3.5 ml-1" />
-          </Link>
-        </div>
-
-        {/* Botão Mobile Menu */}
-        <div className="md:hidden flex items-center">
-          <button
-            type="button"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`p-2 rounded-md ${
-              isScrolled || isDarkHero ? "text-white" : "text-[#033118]"
-            }`}
-            aria-label="Abrir Menu"
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
       </div>
 
-      {/* Menu Mobile Drawer */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-[#022417] border-b border-[#FED15D]/20 px-4 pt-3 pb-6 space-y-3">
-          {navigationConfig.map((item) => (
-            <div key={item.label} className="border-b border-white/5 pb-2">
-              <Link
-                href={item.href}
-                className="block text-base font-medium text-white hover:text-[#FED15D] py-1.5"
-              >
-                {item.label}
-              </Link>
-              {item.children && (
-                <div className="pl-4 mt-1 space-y-1">
-                  {item.children.map((sub) => (
-                    <Link
-                      key={sub.href}
-                      href={sub.href}
-                      className="block text-xs text-gray-300 hover:text-[#FED15D] py-1"
-                    >
-                      • {sub.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
+      <div
+        className={`mobile-nav-backdrop${menuOpen ? " is-open" : ""}`}
+        aria-hidden="true"
+        onClick={() => setMenuOpen(false)}
+      />
+
+      <aside
+        id="mobile-nav-drawer"
+        className={`mobile-nav-drawer${menuOpen ? " is-open" : ""}`}
+        aria-label="Navegação mobile"
+        aria-hidden={!menuOpen}
+      >
+        <div className="mobile-nav-drawer-top">
+          <a
+            href="#"
+            className="mobile-nav-brand flex items-center gap-2"
+            aria-label="Renovera Energias Renováveis - Início"
+            onClick={handleNavClick}
+          >
+            <div className="w-8 h-8 rounded-full bg-[#033118] border border-[#FED15D]/40 p-1 flex items-center justify-center">
+              <Image
+                src="/assets/brand/favicon.svg"
+                alt="Renovera"
+                width={20}
+                height={20}
+                className="object-contain"
+              />
             </div>
-          ))}
-          <div className="pt-2">
-            <Link
-              href="/contato"
-              className="btn-primary w-full text-center text-sm py-2.5"
+            <span className="font-bold text-white text-base font-display">RENOVERA</span>
+          </a>
+          <button
+            type="button"
+            className="mobile-nav-close"
+            aria-label="Fechar menu"
+            onClick={() => {
+              setMenuOpen(false);
+              toggleBtnRef.current?.focus({ preventScroll: true });
+            }}
+          >
+            <svg viewBox="0 0 24 24" width={22} height={22} fill="none" aria-hidden="true">
+              <path
+                d="M6 6l12 12M18 6L6 18"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <nav className="mobile-nav-list" aria-label="Links de navegação">
+          {MOBILE_NAV_LINKS.map((item, idx) => (
+            <a
+              key={item.href}
+              ref={idx === 0 ? firstLinkRef : undefined}
+              href={item.href}
+              className="mobile-nav-item"
+              tabIndex={menuOpen ? 0 : -1}
+              onClick={handleNavClick}
             >
-              Fale com um Especialista
-            </Link>
+              <span className="mobile-nav-num">{item.num}</span>
+              <span className="mobile-nav-text">{item.label}</span>
+              <span className="mobile-nav-arrow" aria-hidden="true">
+                →
+              </span>
+            </a>
+          ))}
+        </nav>
+
+        <div className="mobile-nav-footer">
+          <a
+            href="#contato"
+            className="mobile-nav-cta"
+            tabIndex={menuOpen ? 0 : -1}
+            onClick={handleNavClick}
+          >
+            <span>Falar com um Especialista</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <div className="mobile-nav-socials">
+            <a
+              href={SOCIAL_LINKS.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mobile-nav-social-pill"
+              tabIndex={menuOpen ? 0 : -1}
+            >
+              <LinkedInIcon />
+              <span>LinkedIn</span>
+            </a>
           </div>
         </div>
-      )}
-    </header>
+      </aside>
+    </div>
   );
 }

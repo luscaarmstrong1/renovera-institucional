@@ -1,151 +1,151 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
-import { companyConfig } from "@/config/company";
-import { servicesData } from "@/config/services";
-import { Mail, Phone, MapPin, Clock, ArrowUpRight, ShieldCheck } from "lucide-react";
+import { SITE, SOCIAL_LINKS } from "@/config/site";
+import { LinkedInIcon, MailIcon } from "./icons";
+import { FinalCTA } from "./FinalCTA";
 
 export function Footer() {
   return (
-    <footer className="bg-[#022417] text-white border-t border-[#FED15D]/20 pt-16 pb-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
-          {/* Coluna 1: Marca & Missão */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-[#033118] border border-[#FED15D]/40 rounded-lg p-1.5 flex items-center justify-center">
+    <footer className="footer">
+      <div
+        id="w-node-_01191fa0-2abf-23ff-44da-acbdf6476df4-0ac01850"
+        className="footer-full-height-container"
+      >
+        <FinalCTA />
+        <div
+          id="w-node-_52f3956c-463e-cf84-00da-ec073fe306cc-0ac01850"
+          className="footer-content"
+        >
+          <div
+            id="w-node-_103e8af5-3d0c-0c66-5f7b-cd9c707fa04f-0ac01850"
+            className="footer-fact-wrapper"
+          >
+            <a
+              href={SOCIAL_LINKS.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-info is-first w-inline-block"
+            >
+              <LinkedInIcon className="footer-info-img is-first" />
+              <div className="footer-info-text">
+                conectar no
+                <br />
+                LinkedIn
+              </div>
+            </a>
+            <a
+              href={`https://wa.me/${SITE.whatsappNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-info is-second w-inline-block"
+            >
+              <div className="w-8 h-8 rounded-full bg-[#033118] border border-[#FED15D]/40 p-1 flex items-center justify-center">
                 <Image
                   src="/assets/brand/favicon.svg"
-                  alt="Ícone Renovera"
-                  width={28}
-                  height={28}
+                  alt="Renovera"
+                  width={20}
+                  height={20}
                 />
               </div>
-              <div>
-                <span className="text-xl font-bold tracking-tight font-display text-white">
-                  RENOVERA
-                </span>
-                <p className="text-[0.65rem] tracking-wider uppercase font-semibold text-[#FED15D]">
-                  Energias Renováveis
-                </p>
+              <div className="footer-info-text">
+                atendimento
+                <br />
+                WhatsApp
               </div>
+            </a>
+          </div>
+
+          <div
+            id="w-node-d7a8f3ad-3299-e0db-d6e1-45b4c5d40c53-0ac01850"
+            className="footer-content-wrapper"
+          >
+            <h4 className="footer-heading">
+              <span data-highlight-text="" className="heading-line">
+                {SITE.name}
+              </span>
+              <br />
+              Energias Renováveis
+            </h4>
+            <div className="footer-shipping-wrapper">
+              <span className="shipping-link w-inline-block">
+                <div className="shipping-link-wrap">
+                  <div className="shipping-link-text">
+                    Engenharia • Energia • Regulação
+                  </div>
+                </div>
+              </span>
+              <a href="#projetos" className="shipping-link w-inline-block">
+                <div className="shipping-link-wrap">
+                  <div className="shipping-link-text">Projetos em destaque</div>
+                </div>
+              </a>
+              <a href="#contato" className="shipping-link w-inline-block">
+                <div className="shipping-link-wrap">
+                  <div className="shipping-link-text">Canais de Atendimento</div>
+                </div>
+              </a>
+              <a href="/privacidade" className="shipping-link w-inline-block">
+                <div className="shipping-link-wrap">
+                  <div className="shipping-link-text">
+                    Política de privacidade
+                  </div>
+                </div>
+              </a>
+              <a href="/termos" className="shipping-link w-inline-block">
+                <div className="shipping-link-wrap">
+                  <div className="shipping-link-text">
+                    Termos de uso
+                  </div>
+                </div>
+              </a>
             </div>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              Engenharia elétrica, consultoria regulatória e infraestrutura técnica de energia. Conectamos rigor normativo e solidez operacional para decisões seguras no setor elétrico.
-            </p>
-            <div className="pt-2 flex items-center gap-2 text-xs text-[#FED15D]">
-              <ShieldCheck className="w-4 h-4" />
-              <span>Conformidade ANEEL & Normas ABNT</span>
+            <div className="footer-social-media-wrap">
+              <a
+                href={SOCIAL_LINKS.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-media-link w-inline-block"
+                aria-label="LinkedIn"
+              >
+                <div className="social-media-circle is-white">
+                  <LinkedInIcon />
+                </div>
+              </a>
+              <a
+                href={`mailto:${SITE.email}`}
+                className="social-media-link w-inline-block"
+                aria-label="E-mail"
+              >
+                <div className="social-media-circle is-white">
+                  <MailIcon />
+                </div>
+              </a>
             </div>
-          </div>
-
-          {/* Coluna 2: Soluções */}
-          <div>
-            <h3 className="text-sm font-semibold tracking-wider uppercase text-[#FED15D] mb-4">
-              Soluções Técnicas
-            </h3>
-            <ul className="space-y-2.5 text-sm text-gray-300">
-              {servicesData.map((svc) => (
-                <li key={svc.slug}>
-                  <Link
-                    href={`/solucoes/${svc.slug}`}
-                    className="hover:text-[#FED15D] transition-colors inline-flex items-center gap-1 group"
-                  >
-                    <span>{svc.title}</span>
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Coluna 3: Institucional */}
-          <div>
-            <h3 className="text-sm font-semibold tracking-wider uppercase text-[#FED15D] mb-4">
-              Institucional
-            </h3>
-            <ul className="space-y-2.5 text-sm text-gray-300">
-              <li>
-                <Link href="/sobre" className="hover:text-[#FED15D] transition-colors">
-                  Sobre a Renovera
-                </Link>
-              </li>
-              <li>
-                <Link href="/projetos" className="hover:text-[#FED15D] transition-colors">
-                  Portfólio de Projetos
-                </Link>
-              </li>
-              <li>
-                <Link href="/contato" className="hover:text-[#FED15D] transition-colors">
-                  Solicitação de Análise Técnica
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacidade" className="hover:text-[#FED15D] transition-colors">
-                  Política de Privacidade (LGPD)
-                </Link>
-              </li>
-              <li>
-                <Link href="/termos" className="hover:text-[#FED15D] transition-colors">
-                  Termos de Uso
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Coluna 4: Contato Oficial */}
-          <div>
-            <h3 className="text-sm font-semibold tracking-wider uppercase text-[#FED15D] mb-4">
-              Canais Institucionais
-            </h3>
-            <ul className="space-y-3 text-sm text-gray-300">
-              <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#FED15D] flex-shrink-0 mt-0.5" />
-                <span>{companyConfig.location}</span>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#FED15D] flex-shrink-0" />
-                <a
-                  href={`mailto:${companyConfig.email}`}
-                  className="hover:text-[#FED15D] transition-colors"
-                >
-                  {companyConfig.email}
-                </a>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#FED15D] flex-shrink-0" />
-                <a
-                  href={companyConfig.whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#FED15D] transition-colors"
-                >
-                  {companyConfig.whatsappDisplay} (WhatsApp)
-                </a>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <Clock className="w-4 h-4 text-[#FED15D] flex-shrink-0 mt-0.5" />
-                <span>{companyConfig.businessHours}</span>
-              </li>
-            </ul>
           </div>
         </div>
 
-        {/* Rodapé Inferior */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-gray-400 gap-4">
-          <p>
-            © 2026 {companyConfig.legalName}. Todos os direitos reservados.
-          </p>
-          <div className="flex items-center gap-6">
-            <Link href="/privacidade" className="hover:text-white transition-colors">
-              Privacidade
-            </Link>
-            <Link href="/termos" className="hover:text-white transition-colors">
-              Termos
-            </Link>
-            <span className="text-gray-500">Engenharia Elétrica & Soluções Sustentáveis</span>
+        <div
+          id="w-node-_9cf1d991-93c8-9876-0a84-cf07ed027319-0ac01850"
+          className="footer-logo mobile flex items-center justify-center font-bold text-4xl text-white font-display"
+        >
+          RENOVERA
+        </div>
+
+        <div
+          id="w-node-_440e9322-e28d-ad9e-9ab8-9d51f2096f5d-0ac01850"
+          className="footer-bottom"
+        >
+          <div className="footer-bottom-text">
+            © 2026 {SITE.fullName}. Todos os direitos reservados.
+          </div>
+          <div className="footer-creditos text-xs text-[#D1DFD8]">
+            Engenharia Elétrica &amp; Soluções em Energia Sustentável
           </div>
         </div>
+      </div>
+
+      <div className="footer-logo desktop flex items-center justify-center font-bold text-7xl text-white/20 font-display select-none pointer-events-none">
+        RENOVERA ENERGIAS RENOVÁVEIS
       </div>
     </footer>
   );
