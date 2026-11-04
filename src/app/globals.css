@@ -1,49 +1,199 @@
+@import "tailwindcss";
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Paleta Oficial Corporativa Renovera */
+  --rv-green-primary: #033118;
+  --rv-green-deep: #022417;
+  --rv-green-medium: #0A4B2D;
+  --rv-green-active: #0D5B43;
+  --rv-green-success: #137A4E;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --rv-gold: #FED15D;
+  --rv-gold-light: #FFE59A;
+  --rv-gold-dark: #D6A900;
 
-html {
-  height: 100%;
-}
+  --rv-background: #F8F8F5;
+  --rv-surface: #FFFFFF;
+  --rv-surface-soft: #F4F7F5;
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
+  --rv-text: #17221F;
+  --rv-text-secondary: #40504C;
+  --rv-text-muted: #687873;
 
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --rv-border: #DFE7E3;
+  --rv-border-dark: rgba(254, 209, 93, 0.25);
+  --rv-danger: #B42318;
+
+  --rv-font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --rv-font-display: 'Sofia Sans Condensed', 'Inter', sans-serif;
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-a {
-  color: inherit;
+html {
+  font-family: var(--rv-font-primary);
+  background-color: var(--rv-background);
+  color: var(--rv-text);
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Tipografia Corporativa */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--rv-font-display);
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+
+/* Grids e Texturas Técnicas de Engenharia */
+.engineering-grid {
+  background-color: #022417;
+  background-image:
+    linear-gradient(rgba(254, 209, 93, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(254, 209, 93, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 75% 25%, rgba(10, 75, 45, 0.85) 0%, #022417 70%);
+  background-size: 3rem 3rem, 3rem 3rem, 100% 100%;
+}
+
+.engineering-grid-light {
+  background-color: #F8F8F5;
+  background-image:
+    linear-gradient(rgba(3, 49, 24, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(3, 49, 24, 0.04) 1px, transparent 1px);
+  background-size: 2.5rem 2.5rem;
+}
+
+/* Estilos de Botão Corporativo */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #FED15D;
+  color: #033118;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 6px;
   text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(214, 169, 0, 0.4);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.btn-primary:hover {
+  background-color: #FFE59A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(254, 209, 93, 0.35);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: #FED15D;
+  color: #FED15D;
+  transform: translateY(-2px);
+}
+
+.btn-secondary-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: #033118;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px solid #DFE7E3;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-secondary-dark:hover {
+  background-color: #F4F7F5;
+  border-color: #033118;
+  transform: translateY(-2px);
+}
+
+/* Badge Corporativo */
+.badge-renovera {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  background-color: rgba(254, 209, 93, 0.15);
+  color: #FED15D;
+  border: 1px solid rgba(254, 209, 93, 0.3);
+}
+
+.badge-renovera-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  background-color: #E8F0EC;
+  color: #033118;
+  border: 1px solid #DFE7E3;
+}
+
+/* Cards Técnicos */
+.card-service {
+  background: #FFFFFF;
+  border: 1px solid #DFE7E3;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-service:hover {
+  border-color: #0A4B2D;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(3, 49, 24, 0.08);
+}
+
+/* Acessibilidade - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
