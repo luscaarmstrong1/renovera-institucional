@@ -15,15 +15,15 @@ const PACK_IMAGES = [
 ];
 
 const STAGE_COMPOSITES = [
-  "/assets/renovera/projetos/proj-marco-legal-gd.webp", // 01 Renô Adviser
-  "/assets/renovera/hero/hero-solar-plant.webp", // 02 Renô Projetos
-  "/assets/images/data-intelligence.webp", // 03 Renô Performance
-  "/assets/renovera/institucional/about-commercial-roof.webp", // 04 Renô Invest
-  "/assets/images/elements/elem-bess-unit.webp", // 05 Renô Protect
-  "/assets/images/elements/elem-inverter.webp", // 06 Renô Supply
-  "/assets/images/ai-automation.webp", // 07 Renô Engenharia
-  "/assets/renovera/institucional/about-engineering-team.webp", // 08 Renô Partner
-  "/assets/renovera/projetos/proj-subestacao-spda.webp", // 09 Renô Energy Hub
+  "/assets/renovera/produtos/reno-01-adviser.webp", // 01 Renô Adviser
+  "/assets/renovera/produtos/reno-02-projetos.webp", // 02 Renô Projetos
+  "/assets/renovera/produtos/reno-03-performance.webp", // 03 Renô Performance
+  "/assets/renovera/produtos/reno-04-invest.webp", // 04 Renô Invest
+  "/assets/renovera/produtos/reno-05-protect.webp", // 05 Renô Protect
+  "/assets/renovera/produtos/reno-06-supply.webp", // 06 Renô Supply
+  "/assets/renovera/produtos/reno-07-engenharia.webp", // 07 Renô Engenharia
+  "/assets/renovera/produtos/reno-08-partner.webp", // 08 Renô Partner
+  "/assets/renovera/produtos/reno-09-energy-hub.webp", // 09 Renô Energy Hub
 ];
 
 export function DailyMeals() {
@@ -318,7 +318,7 @@ export function DailyMeals() {
                           variant="dark"
                         />
                         <a
-                          href={stage.githubUrl}
+                          href={stage.detailUrl || stage.githubUrl}
                           className="flavour-github-link"
                         >
                           <span>{ctaLabel}</span>

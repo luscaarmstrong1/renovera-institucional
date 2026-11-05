@@ -138,7 +138,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Memórias de Cálculo e Modelagem de Curva de Carga",
       "Acompanhamento até a emissão conclusiva do Parecer de Acesso"
     ],
-    image: "/assets/images/power-systems.webp",
+    image: "/assets/renovera/produtos/reno-01-adviser.webp",
     slug: "reno-adviser",
     tag: "Homologação & Conexão"
   },
@@ -163,7 +163,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Usina Comissionada e em Operação Comercial",
       "Documentação As-Built e Prontuário de Instalação"
     ],
-    image: "/assets/images/solar-engineering.webp",
+    image: "/assets/renovera/produtos/reno-02-projetos.webp",
     slug: "reno-projetos",
     tag: "Usinas Completas"
   },
@@ -188,7 +188,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Relatório Mensal de Performance e Curva de Geração",
       "Plano de Ação Corretiva para Manutenção Preventiva"
     ],
-    image: "/assets/images/data-intelligence.webp",
+    image: "/assets/renovera/produtos/reno-03-performance.webp",
     slug: "reno-performance",
     tag: "Monitoramento 24/7"
   },
@@ -213,7 +213,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Empreendimento Fotovoltaico Pronto e Homologado",
       "Contratos Operacionais e de Gestão de Ativos"
     ],
-    image: "/assets/images/methodology-office.webp",
+    image: "/assets/renovera/produtos/reno-04-invest.webp",
     slug: "reno-invest",
     tag: "Ativos & Rentabilidade"
   },
@@ -237,7 +237,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Condições e Limites de Cobertura Documentados",
       "Suporte Especializado na Regulação de Sinistros Técnicos"
     ],
-    image: "/assets/images/elements/elem-bess-unit.webp",
+    image: "/assets/renovera/produtos/reno-05-protect.webp",
     slug: "reno-protect",
     tag: "Proteção Patrimonial"
   },
@@ -261,7 +261,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Fichas Técnicas e Certificados INMETRO dos Equipamentos",
       "Suporte na Configuração e Parametrização em Campo"
     ],
-    image: "/assets/images/elements/elem-inverter.webp",
+    image: "/assets/renovera/produtos/reno-06-supply.webp",
     slug: "reno-supply",
     tag: "Kits & Equipamentos"
   },
@@ -286,7 +286,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Dimensionamento Hidráulico e Fotovoltaico de Bombeamento",
       "ART de Projeto e Execução"
     ],
-    image: "/assets/images/ai-automation.webp",
+    image: "/assets/renovera/produtos/reno-07-engenharia.webp",
     slug: "reno-engenharia",
     tag: "Multidisciplinar"
   },
@@ -311,7 +311,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Treinamentos de Protocolo de Qualidade e Segurança",
       "Remuneração Transparente por Serviço de Instalação Realizado"
     ],
-    image: "/assets/images/automation-editorial.webp",
+    image: "/assets/renovera/produtos/reno-08-partner.webp",
     slug: "reno-partner",
     tag: "Rede de Parceiros"
   },
@@ -336,7 +336,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Quadro Geral de Baixa Tensão (QGBT) e Proteções Específicas",
       "Homologação e Liberação de Carga perante a Distribuidora"
     ],
-    image: "/assets/images/elements/elem-ev-charger.webp",
+    image: "/assets/renovera/produtos/reno-09-energy-hub.webp",
     slug: "reno-energy-hub",
     tag: "Subestações & VE"
   }
@@ -400,54 +400,54 @@ export interface ProjectItem {
 export const FEATURED_PROJECTS: ProjectItem[] = [
   {
     id: 'sistemas-fotovoltaicos',
-    title: 'Sistemas Fotovoltaicos de Geração Distribuída',
-    category: 'Energia Solar • Engenharia Turnkey',
+    title: 'Engenharia Fotovoltaica & Geração Distribuída',
+    category: '01 — Engenharia Fotovoltaica',
     projectType: 'Usinas de Solo e Telhado',
     description:
-      'Engenharia executiva e implantação de usinas solares de alta performance, com modelagem precisa de perdas, distribuição balanceada de strings e inversores homologados.',
+      'Dimensionamento de geradores solares de alta performance, modelagem de irradiação, distribuição balanceada de strings e engenharia de conexão preventiva perante a distribuidora.',
     technologies: ['Renô Projetos', 'Geração Distribuída', 'Usinas Solares', 'Alta Eficiência'],
     siteUrl: '/solucoes/reno-projetos',
     siteDomain: 'Usinas Solares Homologadas',
-    image: '/assets/renovera/projetos/proj-energia-solar-ind.webp',
-    metricsBadge: '+150 Usinas Entregues',
+    image: '/assets/renovera/projetos-v5/proj-01-fotovoltaica.webp',
+    metricsBadge: 'Usinas de Alta Performance',
   },
   {
     id: 'sistemas-distribuicao',
-    title: 'Sistemas de Distribuição & Média Tensão',
-    category: 'Engenharia de Potência • Subestações',
+    title: 'Redes Elétricas & Subestações de Média Tensão',
+    category: '02 — Redes e Subestações',
     projectType: 'Infraestrutura Elétrica MT/BT',
     description:
-      'Dimensionamento de cabines primárias abrigadas, aumento de carga, estudos de coordenação de proteção e modernização de entradas de energia para indústrias e comércio.',
+      'Cabines primárias abrigadas de 13,8 kV a 34,5 kV, estudos de coordenação e seletividade de relés, adequação de padrões de entrada e projetos elétricos industriais.',
     technologies: ['Renô Energy Hub', 'Subestações Abrigadas', 'Média Tensão', 'Entrada de Energia'],
     siteUrl: '/solucoes/reno-energy-hub',
     siteDomain: 'Subestações & Rede',
-    image: '/assets/renovera/projetos/proj-subestacao-spda.webp',
+    image: '/assets/renovera/projetos-v5/proj-02-subestacoes.webp',
     metricsBadge: 'Média & Baixa Tensão',
   },
   {
     id: 'automacao-infraestrutura',
-    title: 'Auditoria Regulatória & Reversão de Fluxo',
-    category: 'Renô Adviser™ • Consultoria ANEEL',
-    projectType: 'Homologação e Parecer de Acesso',
+    title: 'Automação, Telemetria & Controle Zero Export',
+    category: '03 — Automação e Controle',
+    projectType: 'Telemetria e Diagnóstico Remoto',
     description:
-      'Superação de indeferimentos de rede por inversão de fluxo de potência perante concessionárias, fundamentação no PRODIST e garantia de escoamento de energia.',
-    technologies: ['Renô Adviser™', 'Inversão de Fluxo', 'PRODIST Módulo 3', 'Homologação'],
-    siteUrl: '/solucoes/reno-adviser',
-    siteDomain: 'Consultoria Regulatória',
-    image: '/assets/renovera/projetos/proj-marco-legal-gd.webp',
-    metricsBadge: 'Segurança Jurídica',
+      'Sistemas de supervisão contínua 24/7, controladores industriais para injeção reversa dinâmica, monitoramento de grandezas elétricas e diagnóstico operacional remoto.',
+    technologies: ['Renô Performance', 'Telemetria 24/7', 'Zero Export', 'Eficiência'],
+    siteUrl: '/solucoes/reno-performance',
+    siteDomain: 'Monitoramento Ativo',
+    image: '/assets/renovera/projetos-v5/proj-03-automacao.webp',
+    metricsBadge: 'Gestão Ativa 24/7',
   },
   {
     id: 'mobilidade-recarga',
-    title: 'Mobilidade Elétrica & Infraestrutura de Recarga',
-    category: 'Transição Energética • Eletromobilidade',
+    title: 'Infraestrutura de Eletromobilidade & Recarga VE',
+    category: '04 — Infraestrutura e Mobilidade',
     projectType: 'Eletropostos DC e AC',
     description:
-      'Planejamento elétrico e implantação de hubs de recarga para veículos elétricos (22 kW a 120 kW), com balanceamento de carga, proteção dedicada e protocolo OCPP.',
+      'Planejamento elétrico e implantação de hubs de recarga para frotas corporativas e empreendimentos comerciais (22 kW a 120 kW), com balanceamento de carga e protocolo OCPP.',
     technologies: ['Eletropostos VE', 'Recarga DC Rápida', 'Balanceamento de Carga', 'Mobilidade'],
     siteUrl: '/solucoes/reno-energy-hub',
     siteDomain: 'Infraestrutura de Recarga',
-    image: '/assets/images/elements/elem-ev-charger.webp',
+    image: '/assets/renovera/projetos-v5/proj-04-mobilidade-ve.webp',
     metricsBadge: 'Recarga 22 a 120 kW',
   },
 ];
@@ -473,6 +473,7 @@ export const INTERACTIVE_SHOWCASE = {
     image: prod.image,
     imageAlt: prod.headline,
     demoUrl: `/solucoes/${prod.slug}`,
+    detailUrl: `/solucoes/${prod.slug}`,
     githubUrl: `/solucoes/${prod.slug}`,
     technologies: prod.highlights.slice(0, 4),
   })),

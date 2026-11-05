@@ -42,12 +42,12 @@ export function Hero() {
             >
               <ActionButton
                 href="#arquitetura"
-                label="Explorar soluções"
+                label="Conheça nossas soluções"
                 variant="dark"
               />
               <ActionButton
                 href="#contato"
-                label="Falar com a Renovera"
+                label="Fale com um especialista"
                 variant="white"
               />
             </div>
@@ -248,7 +248,7 @@ export function Hero() {
                       data-load-stage-text=""
                       className="paragraph is-stage-paragraph"
                     >
-                      Soluções integradas para o futuro da energia: engenharia elétrica, geração fotovoltaica, consultoria regulatória, gestão de ativos e infraestrutura energética em uma atuação integrada.
+                      Soluções integradas em geração fotovoltaica, engenharia elétrica, consultoria regulatória e infraestrutura energética.
                     </p>
                     <div
                       data-load-stage-underline=""
