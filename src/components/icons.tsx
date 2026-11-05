@@ -22,7 +22,7 @@ const LOGO_PATHS = [
   "M1880 580H2010",
 ];
 
-export function LogoLucas({
+export function LogoRenovera({
   id,
   className,
   animated = false,
@@ -37,7 +37,7 @@ export function LogoLucas({
       viewBox="0 100 2062 520"
       className={className}
       role="img"
-      aria-label="Lucas Santos"
+      aria-label="Renovera Energias Renováveis"
     >
       <g
         fill="none"

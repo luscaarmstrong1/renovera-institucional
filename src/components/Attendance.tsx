@@ -269,7 +269,7 @@ export function Attendance({ mobile = false }: { mobile?: boolean }) {
         <>
           <div className="sequence-mobile-hero-photo">
             <img
-              src="/assets/images/solar-engineering.webp"
+              src="/assets/renovera/hero/hero-solar-plant.webp"
               alt="Ambiente de engenharia e projetos solares Renovera"
               width={1024}
               height={682}

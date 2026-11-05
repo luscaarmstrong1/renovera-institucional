@@ -15,15 +15,15 @@ const PACK_IMAGES = [
 ];
 
 const STAGE_COMPOSITES = [
-  "/assets/images/power-systems.webp",
-  "/assets/images/solar-engineering.webp",
-  "/assets/images/data-intelligence.webp",
-  "/assets/images/methodology-office.webp",
-  "/assets/images/elements/elem-bess-unit.webp",
-  "/assets/images/elements/elem-inverter.webp",
-  "/assets/images/ai-automation.webp",
-  "/assets/images/automation-editorial.webp",
-  "/assets/images/elements/elem-ev-charger.webp",
+  "/assets/renovera/projetos/proj-marco-legal-gd.webp", // 01 Renô Adviser
+  "/assets/renovera/hero/hero-solar-plant.webp", // 02 Renô Projetos
+  "/assets/images/data-intelligence.webp", // 03 Renô Performance
+  "/assets/renovera/institucional/about-commercial-roof.webp", // 04 Renô Invest
+  "/assets/images/elements/elem-bess-unit.webp", // 05 Renô Protect
+  "/assets/images/elements/elem-inverter.webp", // 06 Renô Supply
+  "/assets/images/ai-automation.webp", // 07 Renô Engenharia
+  "/assets/renovera/institucional/about-engineering-team.webp", // 08 Renô Partner
+  "/assets/renovera/projetos/proj-subestacao-spda.webp", // 09 Renô Energy Hub
 ];
 
 export function DailyMeals() {

@@ -53,12 +53,13 @@ export function Comparison() {
             className="img-wrapper methodology-img-wrapper"
           >
             <img
-              src="/assets/images/methodology-office.webp"
+              src="/assets/renovera/projetos/proj-auditoria-rede.webp"
               alt="Ambiente integrado de engenharia e consultoria técnica Renovera"
               className="img methodology-main-img"
               loading="lazy"
               width={1011}
               height={1450}
+              style={{ objectFit: "cover", borderRadius: "12px" }}
             />
           </div>
           <div

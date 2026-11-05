@@ -146,7 +146,7 @@ export function Hero() {
                 <div className="stage-photo-wrapper">
                   <div data-load-stage-img="" className="stage-photo">
                     <img
-                      src="/assets/images/solar-engineering.webp"
+                      src="/assets/renovera/hero/hero-solar-plant.webp"
                       alt="Usinas Fotovoltaicas e Infraestrutura de Energia Renovera"
                       width={572}
                       height={760}

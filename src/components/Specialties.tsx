@@ -245,10 +245,11 @@ export function Specialties() {
           <div className="sequence-prato-wrap">
             <div data-sequence-prato="" className="sequence-prato">
               <img
-                src="/assets/images/lucas-about.webp"
-                alt="Capacidade Técnica e Engenharia Renovera"
+                src="/assets/renovera/hero/hero-solar-plant.webp"
+                alt="Capacidade Técnica e Usinas Solares Renovera"
                 className="sequence-prato-img"
                 loading="lazy"
+                style={{ borderRadius: "50%", objectFit: "cover", aspectRatio: "1/1" }}
               />
             </div>
           </div>

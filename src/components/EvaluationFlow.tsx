@@ -26,34 +26,34 @@ const STEPS: StepConfig[] = [
   {
     id: "abertura",
     bot: () => [
-      "👋 Olá! Eu sou o **Lucas**.",
-      "Esta conversa rápida me ajuda a entender seu **contexto, desafio ou oportunidade** antes do nosso contato.",
+      "👋 Olá! Somos a equipe técnica da **Renovera Energias Renováveis**.",
+      "Esta conversa rápida nos ajuda a entender seu **projeto, usina ou demanda técnica** para direcionar o especialista certo.",
       "Leva **menos de 2 minutos**.",
     ],
     tipo: "botao",
-    rotulo: "Vamos começar",
+    rotulo: "Iniciar atendimento técnico",
   },
   {
     id: "nome",
-    bot: () => ["Como posso te chamar?"],
+    bot: () => ["Como podemos te chamar e qual a sua empresa?"],
     tipo: "texto",
     chave: "nome",
-    placeholder: "Seu nome",
+    placeholder: "Seu nome e empresa",
   },
   {
     id: "demanda",
     bot: (r) => [
-      `Prazer, ${firstName(r.nome)}! Qual frente tem mais relação com o que você procura?`,
+      `Prazer, ${firstName(r.nome)}! Qual das soluções Renô tem mais relação com a sua necessidade?`,
     ],
     tipo: "escolha",
     chave: "demanda",
     opcoes: [
-      "Engenharia Elétrica / Energia Solar",
-      "Estudos de Conexão / Consultoria Regulatória",
-      "Dados, BI ou Inteligência Artificial",
-      "Automação / Aplicação Web / Software",
-      "Oportunidade Profissional / Parceria",
-      "Outro assunto",
+      "Renô Adviser™ (Inversão de Fluxo / Conexão)",
+      "Renô Projetos (Usinas Solares Turnkey)",
+      "Renô Performance (Monitoramento e Gestão 24/7)",
+      "Renô Energy Hub (Subestações / Eletropostos VE)",
+      "Renô Invest / Protect / Supply",
+      "Renô Partner (Parceria para Integradores)",
     ],
   },
   {
@@ -245,9 +245,9 @@ export function EvaluationFlow() {
     answers.demanda ?? "Engenharia & Tecnologia"
   })`;
   const summaryText = [
-    `Olá, Lucas! Meu nome é ${answers.nome ?? ""}.`,
-    `• Frente de interesse: ${answers.demanda ?? ""}`,
-    `• Contexto: ${answers.contexto ?? ""}`,
+    `Olá, equipe Renovera! Meu nome é ${answers.nome ?? ""}.`,
+    `• Solução de interesse: ${answers.demanda ?? ""}`,
+    `• Contexto do projeto: ${answers.contexto ?? ""}`,
     `• Estágio / Prazo: ${answers.prazo ?? ""}`,
     `• Canal de retorno: ${answers.retorno ?? ""}`,
   ].join("\n");
@@ -267,19 +267,19 @@ export function EvaluationFlow() {
     <div
       className="conversa"
       role="region"
-      aria-label="Briefing de projeto com Lucas Silva Santos"
+      aria-label="Atendimento técnico e briefing de projetos com a Renovera"
     >
       <div className="conversa__topo">
         <img
           className="conversa__avatar"
-          src="/assets/images/lucas-about.webp"
-          alt="Lucas Silva Santos"
+          src="/assets/brand/favicon.svg"
+          alt="Renovera Energias Renováveis"
           width={46}
           height={46}
         />
         <p className="conversa__quem">
           {SITE.nomeCompleto}
-          <small>{typing ? "digitando..." : "briefing técnico & contato"}</small>
+          <small>{typing ? "digitando..." : "atendimento técnico & engenharia"}</small>
         </p>
       </div>
 
@@ -300,7 +300,7 @@ export function EvaluationFlow() {
             <p key={idx} className="balao balao--img">
               <img
                 src={msg.img}
-                alt="Lucas Silva Santos | Engenheiro Eletricista | Gerente de Projetos | Energia, Dados & Automação"
+                alt="Renovera Energias Renováveis | Engenharia, Projetos Solares & Regulação"
                 width={1200}
                 height={630}
               />
@@ -319,7 +319,7 @@ export function EvaluationFlow() {
         {typing && (
           <p
             className="balao balao--digitando"
-            aria-label="Lucas está digitando"
+            aria-label="Renovera está digitando"
           >
             <i />
             <i />
@@ -412,7 +412,7 @@ export function EvaluationFlow() {
         {!locked && currentStep.tipo === "consentimento" && (
           <div className="conversa__ok">
             <p>
-              Autorizo o uso das informações preenchidas neste briefing exclusivamente para retorno de contato profissional por Lucas Silva Santos, conforme a{" "}
+              Autorizo o uso das informações preenchidas neste formulário exclusivamente para retorno de contato técnico e comercial pela equipe da Renovera Energias Renováveis, conforme a{" "}
               <a href="/privacidade/">Política de privacidade</a>.
             </p>
             <label className="conversa__isca" aria-hidden="true">

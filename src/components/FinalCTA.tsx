@@ -9,7 +9,7 @@ export function FinalCTA() {
     >
       <div className="absolute-background">
         <img
-          src="/assets/images/lucas-footer.webp"
+          src="/assets/renovera/contato/footer-solar-landscape.webp"
           alt="Infraestrutura Elétrica e Usinas Renovera"
           className="footer-img top"
           style={{ objectFit: "cover" }}

@@ -68,8 +68,8 @@ export function About() {
                 <div data-inertia-item-child="" className="testimonial-inner _1">
                   <img
                     className="testimonial-img"
-                    src="/assets/images/power-systems.webp"
-                    alt="Engenharia Elétrica e Subestações de Potência Renovera"
+                    src="/assets/renovera/institucional/about-commercial-roof.webp"
+                    alt="Engenharia Elétrica e Instalações Comerciais Renovera"
                     loading="lazy"
                   />
                   <div className="testimonial-text-inner">
@@ -96,7 +96,7 @@ export function About() {
                 <div data-inertia-item-child="" className="testimonial-inner _2">
                   <img
                     className="testimonial-img"
-                    src="/assets/images/solar-engineering.webp"
+                    src="/assets/renovera/institucional/about-solar-field.webp"
                     alt="Usinas Fotovoltaicas e Geração Distribuída Renovera"
                     loading="lazy"
                   />
@@ -124,12 +124,12 @@ export function About() {
                 <div data-inertia-item-child="" className="testimonial-inner _3">
                   <img
                     className="testimonial-img"
-                    src="/assets/images/data-intelligence.webp"
-                    alt="Consultoria Regulatória, Renô Adviser e Telemetria Renovera"
+                    src="/assets/renovera/institucional/about-engineering-team.webp"
+                    alt="Equipe Técnica de Engenharia e Regulação Renovera"
                     loading="lazy"
                   />
                   <div className="testimonial-text-inner">
-                    <div className="testimonial-text">Regulação &amp; Tecnologia</div>
+                    <div className="testimonial-text">Equipe &amp; Operação Técnica</div>
                   </div>
                 </div>
               </div>
