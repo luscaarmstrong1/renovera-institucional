@@ -1,33 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import { TechBadgeSvg } from "./icons";
-
-const COMPARISON_ITEMS_RENOVERA = [
-  {
-    integrated: "Análise técnica fundamentada e auditoria de fluxo",
-    isolated: "Aceitação passiva de orçamentos e pareceres de rede",
-  },
-  {
-    integrated: "Conformidade regulatória estrita com ANEEL e PRODIST",
-    isolated: "Dimensionamento desprovido de respaldo regulatório",
-  },
-  {
-    integrated: "Avaliação integrada de alternativas de conexão e custo",
-    isolated: "Obras desproporcionais sem estudo de fluxo reverso",
-  },
-  {
-    integrated: "Documentação técnica executiva com ART e memoriais",
-    isolated: "Diagramas simplificados sem aprovação em concessionária",
-  },
-  {
-    integrated: "Prontidão para mobilidade elétrica e telemetria Zero Export",
-    isolated: "Sistemas isolados sem controle inteligente de injeção",
-  },
-  {
-    integrated: "Acompanhamento formal do protocolo ao comissionamento",
-    isolated: "Falta de suporte após a emissão do projeto",
-  },
-];
+import { COMPARISON_ITEMS } from "@/config/site";
 
 const ROW_IDS = [
   {
@@ -60,6 +33,11 @@ const ROW_IDS = [
     checkerId: "w-node-_0685c628-c535-0f2f-d40f-5fc514d3367d-0ac01850",
     lineId: undefined,
   },
+  {
+    id: "w-node-_72ac6b11-8c92-ef2d-f7a4-cdbd6ab660b0-0ac01850",
+    checkerId: "w-node-_72ac6b11-8c92-ef2d-f7a4-cdbd6ab660b2-0ac01850",
+    lineId: undefined,
+  },
 ];
 
 export function Comparison() {
@@ -76,7 +54,7 @@ export function Comparison() {
           >
             <img
               src="/assets/images/methodology-office.webp"
-              alt="Ambiente integrado de engenharia elétrica e consultoria regulatória Renovera"
+              alt="Ambiente integrado de engenharia e consultoria técnica Renovera"
               className="img methodology-main-img"
               loading="lazy"
               width={1011}
@@ -89,17 +67,17 @@ export function Comparison() {
           >
             <h2 className="benefit-heading">
               <span data-highlight-text="" className="light-green-span">
-                Não basta projetar.
+                Mais do que serviços.
               </span>
               <br />
-              É preciso conectar as soluções.
+              Uma atuação integrada.
             </h2>
 
             <div
               data-benefit-table=""
               className="benefit-table"
               role="table"
-              aria-label="Comparativo entre abordagem integrada Renovera e uma abordagem isolada"
+              aria-label="Comparativo entre abordagem integrada Renovera e processos conduzidos de forma fragmentada"
             >
               <div
                 id="w-node-_244ca70f-4fb8-4324-7d1f-6e5cebd97f1e-0ac01850"
@@ -111,7 +89,7 @@ export function Comparison() {
                   className="benefit-table-title"
                   role="columnheader"
                 >
-                  Abordagem Integrada Renovera vs. Isolada
+                  Abordagem Integrada Renovera vs. Fragmentada
                 </div>
                 <div
                   id="w-node-d5a0031d-8b6e-5d4a-5e75-e26d1c40acd5-0ac01850"
@@ -132,7 +110,7 @@ export function Comparison() {
                   className="benefit-table-title"
                   role="columnheader"
                 >
-                  Abordagem Isolada
+                  Processo Fragmentado
                 </div>
               </div>
               <div
@@ -144,7 +122,7 @@ export function Comparison() {
                 id="w-node-_89929daf-28b9-a774-1cdd-9d54c6ee4049-0ac01850"
                 className="benefit-item-wrapper"
               >
-                {COMPARISON_ITEMS_RENOVERA.map((item, idx) => {
+                {COMPARISON_ITEMS.map((item, idx) => {
                   const ids = ROW_IDS[idx] ?? ROW_IDS[0];
                   return (
                     <div key={item.integrated} style={{ display: "contents" }}>
@@ -205,12 +183,12 @@ export function Comparison() {
                           </div>
                           <div
                             className="benefit-item-x"
-                            title="Abordagem isolada"
+                            title="Processo conduzido de forma fragmentada"
                           >
                             <svg
                               viewBox="0 0 20 20"
                               className="check"
-                              aria-label="Não: Abordagem isolada"
+                              aria-label="Não: Processo fragmentado"
                               role="img"
                               fill="none"
                             >

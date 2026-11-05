@@ -41,8 +41,8 @@ export function Hero() {
               style={{ display: "flex", gap: "1em", flexWrap: "wrap", justifyContent: "center" }}
             >
               <ActionButton
-                href="#projetos"
-                label="Explorar nossas soluções"
+                href="#arquitetura"
+                label="Explorar soluções"
                 variant="dark"
               />
               <ActionButton
@@ -71,10 +71,10 @@ export function Hero() {
                         transform="rotate(-6 160 56)"
                         fill="currentColor"
                         style={{ fontFamily: "var(--font-mao)" }}
-                        fontSize={36}
+                        fontSize={34}
                       >
                         <text x={0} y={45}>
-                          Engenharia &amp; Energia
+                          Engenharia &amp; Regulação
                         </text>
                         <text x={18} y={90}>
                           Visão Integrada
@@ -93,10 +93,10 @@ export function Hero() {
                         transform="rotate(-6 160 56)"
                         fill="currentColor"
                         style={{ fontFamily: "var(--font-mao)" }}
-                        fontSize={36}
+                        fontSize={34}
                       >
                         <text x={0} y={45}>
-                          Engenharia &amp; Energia
+                          Engenharia &amp; Regulação
                         </text>
                         <text x={18} y={90}>
                           Visão Integrada
@@ -147,7 +147,7 @@ export function Hero() {
                   <div data-load-stage-img="" className="stage-photo">
                     <img
                       src="/assets/images/solar-engineering.webp"
-                      alt="Renovera Energias Renováveis - Engenharia e Usinas Solares"
+                      alt="Usinas Fotovoltaicas e Infraestrutura de Energia Renovera"
                       width={572}
                       height={760}
                       className="stage-img"
@@ -163,9 +163,9 @@ export function Hero() {
                       className="stage-fact is-first"
                     >
                       <div className="stage-fact-wrap">
-                        <div className="stage-fact-number">MMGD</div>
+                        <div className="stage-fact-number">+150</div>
                       </div>
-                      <div className="stage-fact-text">Consultoria e Conexão</div>
+                      <div className="stage-fact-text">usinas entregues</div>
                     </div>
                   </div>
                   <div data-inertia-item="" className="stage-fact-outer">
@@ -175,9 +175,9 @@ export function Hero() {
                       className="stage-fact is-second"
                     >
                       <div className="stage-fact-wrap">
-                        <div className="stage-fact-number">MT &amp; BT</div>
+                        <div className="stage-fact-number">Adviser™</div>
                       </div>
-                      <div className="stage-fact-text">Projetos e Subestações</div>
+                      <div className="stage-fact-text">reversão de fluxo</div>
                     </div>
                   </div>
                   <div data-inertia-item="" className="stage-fact-outer">
@@ -187,10 +187,9 @@ export function Hero() {
                       className="stage-fact is-third"
                     >
                       <div className="stage-fact-wrap">
-                        <div className="stage-fact-number">100</div>
-                        <div className="stage-fact-unit">%</div>
+                        <div className="stage-fact-number">MT &amp; BT</div>
                       </div>
-                      <div className="stage-fact-text">Rigor Normativo ANEEL</div>
+                      <div className="stage-fact-text">subestações e rede</div>
                     </div>
                   </div>
                   <div data-inertia-item="" className="stage-fact-outer">
@@ -200,10 +199,9 @@ export function Hero() {
                       className="stage-fact is-fourth"
                     >
                       <div className="stage-fact-wrap">
-                        <div className="stage-fact-number">22-120</div>
-                        <div className="stage-fact-unit">kW</div>
+                        <div className="stage-fact-number">2020</div>
                       </div>
-                      <div className="stage-fact-text">Recarga Elétrica VE</div>
+                      <div className="stage-fact-text">tradição e solidez</div>
                     </div>
                   </div>
                 </div>
@@ -229,28 +227,28 @@ export function Hero() {
                 <div className="stage-text-wrap">
                   <div
                     style={{
-                      fontSize: "1.2em",
-                      letterSpacing: "0.08em",
+                      fontSize: "1.15em",
+                      letterSpacing: "0.1em",
                       textTransform: "uppercase",
                       color: "var(--color-gold-accent)",
                       fontWeight: 600,
                     }}
                   >
-                    RENOVERA ENERGIAS RENOVÁVEIS • ENGENHARIA ELÉTRICA &amp; REGULAÇÃO
+                    RENOVERA ENERGIAS RENOVÁVEIS • SOLUÇÕES INTEGRADAS
                   </div>
                   <h1 data-load-stage-title="" className="hero-heading">
-                    <span className="white-span">Engenharia,</span>
+                    <span className="white-span">Energia que</span>
                     <br />
-                    energia e
+                    transforma.
                     <br />
-                    soluções integradas.
+                    Engenharia que conecta.
                   </h1>
                   <div className="stage-paragraph-wrap">
                     <p
                       data-load-stage-text=""
                       className="paragraph is-stage-paragraph"
                     >
-                      Soluções especializadas em engenharia elétrica, projetos fotovoltaicos, consultoria regulatória, automação e infraestrutura energética.
+                      Soluções integradas para o futuro da energia: engenharia elétrica, geração fotovoltaica, consultoria regulatória, gestão de ativos e infraestrutura energética em uma atuação integrada.
                     </p>
                     <div
                       data-load-stage-underline=""

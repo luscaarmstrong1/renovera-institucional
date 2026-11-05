@@ -4,21 +4,21 @@ import React, { useState } from "react";
 import { SITE, SOCIAL_LINKS } from "@/config/site";
 import { LinkedInIcon } from "./icons";
 
-const PILLARS = [
+const PILLARS_RENOVERA = [
   {
-    title: "Engenharia & Conexão",
-    status: "Rigor Normativo",
-    institution: "PRODIST • ANEEL • ABNT NBR",
+    title: "Engenharia de Precisão",
+    status: "Rigor Técnico MT/BT",
+    institution: "Subestações, usinas solares e projetos executivos de potência",
   },
   {
-    title: "Projetos em MT e BT",
-    status: "Capacidade Técnica",
-    institution: "Subestações, Cabines & Entradas de Energia",
+    title: "Segurança Jurídico-Regulatória",
+    status: "Expertise Renô Adviser™",
+    institution: "Auditoria de inversão de fluxo e conformidade ANEEL/PRODIST",
   },
   {
-    title: "Mobilidade & Automação",
-    status: "Transição Energética",
-    institution: "Recarga VE 22-120 kW & Telemetria",
+    title: "Tecnologia & Gestão 24/7",
+    status: "Renô Performance",
+    institution: "Telemetria ativa, detecção preditiva de desvios e diagnóstico",
   },
 ];
 
@@ -33,12 +33,12 @@ export function About() {
             id="w-node-_3e09cbcc-bb63-d8d5-fc92-5249d862c0ff-0ac01850"
             className="insider-heading"
           >
-            Engenharia aplicada.
+            Uma empresa.
             <br />
-            Soluções que
+            Um ecossistema
             <br />
             <span data-highlight-text="" className="light-green-span">
-              conectam resultados.
+              de soluções.
             </span>
           </h2>
           <div
@@ -68,12 +68,12 @@ export function About() {
                 <div data-inertia-item-child="" className="testimonial-inner _1">
                   <img
                     className="testimonial-img"
-                    src="/assets/images/automation-editorial.webp"
-                    alt="Automação, Controle Dinâmico e Telemetria em Tempo Real"
+                    src="/assets/images/power-systems.webp"
+                    alt="Engenharia Elétrica e Subestações de Potência Renovera"
                     loading="lazy"
                   />
                   <div className="testimonial-text-inner">
-                    <div className="testimonial-text">Automação &amp; Controle</div>
+                    <div className="testimonial-text">Engenharia &amp; Infraestrutura</div>
                   </div>
                 </div>
               </div>
@@ -96,12 +96,12 @@ export function About() {
                 <div data-inertia-item-child="" className="testimonial-inner _2">
                   <img
                     className="testimonial-img"
-                    src="/assets/images/energy-editorial.webp"
-                    alt="Sistemas de Energia, Usinas Solares e Subestações de Média Tensão"
+                    src="/assets/images/solar-engineering.webp"
+                    alt="Usinas Fotovoltaicas e Geração Distribuída Renovera"
                     loading="lazy"
                   />
                   <div className="testimonial-text-inner">
-                    <div className="testimonial-text">Sistemas &amp; Usinas Solares</div>
+                    <div className="testimonial-text">Energia Solar Fotovoltaica</div>
                   </div>
                 </div>
               </div>
@@ -124,12 +124,12 @@ export function About() {
                 <div data-inertia-item-child="" className="testimonial-inner _3">
                   <img
                     className="testimonial-img"
-                    src="/assets/images/power-systems.webp"
-                    alt="Consultoria Regulatória, Pareceres de Acesso e Inversão de Fluxo"
+                    src="/assets/images/data-intelligence.webp"
+                    alt="Consultoria Regulatória, Renô Adviser e Telemetria Renovera"
                     loading="lazy"
                   />
                   <div className="testimonial-text-inner">
-                    <div className="testimonial-text">Consultoria Regulatória</div>
+                    <div className="testimonial-text">Regulação &amp; Tecnologia</div>
                   </div>
                 </div>
               </div>
@@ -139,13 +139,13 @@ export function About() {
               className="insider-text-inner"
             >
               <h3 className="insider-subheading">
-                A Renovera Energias Renováveis conecta engenharia elétrica de precisão, inteligência regulatória e foco operacional.
+                Engenharia, conhecimento regulatório e inovação para transformar o setor energético.
               </h3>
               <p className="paragraph">
-                No cenário dinâmico do setor elétrico brasileiro — pautado pelo Marco Legal da Micro e Minigeração Distribuída (Lei nº 14.300/2022) e pelas resoluções normativas da ANEEL —, decisões energéticas exigem uma visão técnica aprofundada e integrada.
+                Fundada em 2020, a Renovera desenvolve soluções para o mercado de energia, integrando engenharia elétrica de precisão, análise regulatória profunda, gestão de ativos e tecnologia.
               </p>
               <p className="paragraph">
-                Nossa atuação vai além de um dimensionamento isolado: envolve auditoria detalhada de orçamentos de conexão, modelagem de curva de carga contra inversão de fluxo, projetos de média tensão e comissionamento com rigor normativo.
+                Nossa atuação contempla diferentes etapas do ciclo de um empreendimento energético: desde a viabilidade técnica e estruturação de projetos até a reversão de indeferimentos de conexão (Renô Adviser™), suprimento de equipamentos, montagem com parceiros homologados e monitoramento contínuo 24/7.
               </p>
               <div className="insider-cta">
                 <a
@@ -155,19 +155,19 @@ export function About() {
                   className="insta-grande"
                 >
                   <LinkedInIcon className="insta-grande-icone" />
-                  <span>LinkedIn Oficial</span>
+                  <span>{SITE.linkedinHandle}</span>
                 </a>
                 <a
                   href="#contato"
                   className="insta-grande"
                 >
-                  <span className="font-bold text-sm">Fale com a Renovera</span>
+                  <span className="font-bold text-sm">Falar com a Renovera</span>
                 </a>
               </div>
             </div>
 
-            <div className="about-edu-grid" aria-label="Pilares corporativos">
-              {PILLARS.map((p) => (
+            <div className="about-edu-grid" aria-label="Pilares corporativos Renovera">
+              {PILLARS_RENOVERA.map((p) => (
                 <div key={p.title} className="about-edu-card">
                   <span className="about-edu-status">{p.status}</span>
                   <h4 className="about-edu-degree">{p.title}</h4>

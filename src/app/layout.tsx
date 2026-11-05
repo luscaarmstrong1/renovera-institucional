@@ -62,7 +62,7 @@ const jsonLd = {
   url: SITE.url,
   logo: `${SITE.url}/assets/brand/logo-renovera.png`,
   description: SITE.seo.description,
-  sameAs: [SOCIAL_LINKS.linkedin, SOCIAL_LINKS.github],
+  sameAs: [SOCIAL_LINKS.linkedin, SOCIAL_LINKS.instagram, SOCIAL_LINKS.facebook],
   address: {
     "@type": "PostalAddress",
     addressLocality: "São João da Boa Vista",

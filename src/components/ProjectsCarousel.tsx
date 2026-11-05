@@ -1,51 +1,5 @@
 import React from "react";
-
-const PROJECTS_RENOVERA = [
-  {
-    id: "proj-01",
-    title: "Conexão Elétrica e Integração de Sistemas",
-    category: "Engenharia de Conexão",
-    projectType: "Média Tensão & Subestações",
-    description: "Rede de média tensão, dimensionamento de aterramento, coordenação de proteção, diagramas unifilares executivos e automação.",
-    image: "/assets/images/power-systems.webp",
-    siteUrl: "/projetos/reavaliacao-inversao-fluxo-mmgd",
-    siteDomain: "Estudo & Projeto Executivo",
-    technologies: ["Média Tensão", "PRODIST", "SPDA NBR 5419", "Seletividade"],
-  },
-  {
-    id: "proj-02",
-    title: "Engenharia Executiva Fotovoltaica",
-    category: "Energia Solar",
-    projectType: "Geração Distribuída MMGD",
-    description: "Arranjos fotovoltaicos, distribuição balanceada de strings, inversores trifásicos, entrada de energia abrigada e modelagem de perdas.",
-    image: "/assets/images/solar-engineering.webp",
-    siteUrl: "/projetos/usina-solar-comercial-300kwp",
-    siteDomain: "Usinas de Solo & Cobertura",
-    technologies: ["NBR 16690", "Usinas Fotovoltaicas", "Modelagem CA/CC", "Inversores String"],
-  },
-  {
-    id: "proj-03",
-    title: "Hub de Recarga para Veículos Elétricos",
-    category: "Eletropostos",
-    projectType: "Mobilidade Elétrica",
-    description: "Infraestrutura de recarga rápida DC (60 kW a 120 kW) e semirrápida AC (22 kW) com balanceamento dinâmico de carga e proteção DR tipo B.",
-    image: "/assets/images/elements/elem-ev-charger.webp",
-    siteUrl: "/solucoes/eletropostos",
-    siteDomain: "Eletropostos & Frotas VE",
-    technologies: ["NBR 17019", "Carregadores DC/AC", "Balanceamento Dinâmico", "OCPP"],
-  },
-  {
-    id: "proj-04",
-    title: "Automação, Telemetria & Injeção Zero",
-    category: "Controle & Automação",
-    projectType: "Telemetria Industrial",
-    description: "Controle dinâmico de exportação (Zero Export) para usinas solares, leitura rápida de fronteira via Modbus TCP e supervisório integrado.",
-    image: "/assets/images/automation-editorial.webp",
-    siteUrl: "/solucoes/automacao",
-    siteDomain: "Telemetria & Redes Industriais",
-    technologies: ["Modbus TCP", "Zero Export", "Supervisórios", "Telemetria em Tempo Real"],
-  },
-];
+import { FEATURED_PROJECTS } from "@/config/site";
 
 function GlobeLinkIcon({ className }: { className?: string }) {
   return (
@@ -73,7 +27,7 @@ export function ProjectsCarousel() {
         <img
           className="bg-img projects-bg-main"
           src="/assets/images/projects-bg-webdev.webp"
-          alt="Ambiente técnico de engenharia elétrica, projetos solares e infraestrutura de energia"
+          alt="Infraestrutura técnica de engenharia elétrica, projetos solares e redes de potência"
           data-testimonial-parallax-item=""
         />
         <div className="projects-bg-gradient" aria-hidden="true" />
@@ -100,7 +54,7 @@ export function ProjectsCarousel() {
                   fontSize={26.5}
                 >
                   <text x={0} y={22}>
-                    engenharia &amp; projetos executivos
+                    engenharia aplicada em escala
                   </text>
                 </g>
               </svg>
@@ -119,15 +73,15 @@ export function ProjectsCarousel() {
                   fontSize={26.5}
                 >
                   <text x={0} y={22}>
-                    engenharia &amp; projetos executivos
+                    engenharia aplicada em escala
                   </text>
                 </g>
               </svg>
             </div>
             <h2 className="testimonial-big-heading">
-              Projetos, usinas
+              Engenharia aplicada.
               <br />
-              &amp; infraestrutura elétrica.
+              Soluções em diferentes escalas.
             </h2>
           </div>
           <div
@@ -150,7 +104,7 @@ export function ProjectsCarousel() {
                     type="button"
                     data-slider-left-button=""
                     className="testimonial-slider-button is-left"
-                    aria-label="Projeto anterior"
+                    aria-label="Categoria anterior"
                   >
                     <svg
                       viewBox="0 0 20 20"
@@ -172,7 +126,7 @@ export function ProjectsCarousel() {
                     type="button"
                     data-slider-right-button=""
                     className="testimonial-slider-button is-right"
-                    aria-label="Próximo projeto"
+                    aria-label="Próxima categoria"
                   >
                     <svg
                       viewBox="0 0 20 20"
@@ -196,7 +150,7 @@ export function ProjectsCarousel() {
                 className="testimonial-slider-inner"
                 data-lenis-prevent-wheel=""
               >
-                {PROJECTS_RENOVERA.map((project) => (
+                {FEATURED_PROJECTS.map((project) => (
                   <div
                     key={project.id}
                     className="testimonial-slider-item-wrap"
@@ -265,7 +219,7 @@ export function ProjectsCarousel() {
                               className="testimonial-verified-text"
                               style={{ fontWeight: 600 }}
                             >
-                              Ver Detalhes →
+                              Ver Solução →
                             </div>
                           </div>
                         </div>

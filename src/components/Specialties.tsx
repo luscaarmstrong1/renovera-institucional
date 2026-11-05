@@ -2,14 +2,14 @@ import React from "react";
 import { TechBadgeSvg } from "./icons";
 import { Attendance } from "./Attendance";
 
-const COMPLEMENTARY_AREAS_RENOVERA = {
+const SPECIALTIES_RENOVERA = {
   areas: [
-    { title: "Consultoria Regulatória", detail: "Inversão de fluxo e pareceres de acesso MMGD" },
-    { title: "Projetos Elétricos MT/BT", detail: "Subestações abrigadas, cabines e diagramas" },
-    { title: "Energia Solar Fotovoltaica", detail: "Usinas de solo, coberturas e geração distribuída" },
-    { title: "Eletropostos 22-120 kW", detail: "Infraestrutura de recarga lenta AC e rápida DC" },
-    { title: "Automação & Zero Export", detail: "Controle dinâmico, telemetria e supervisão" },
-    { title: "Estudos de Viabilidade", detail: "Diagnóstico de capacidade de rede e tarifação" },
+    { title: "Consultoria Regulatória", detail: "Análise de estudos de conexão, inversão de fluxo e orçamentos junto a concessionárias" },
+    { title: "Engenharia Elétrica MT/BT", detail: "Projetos em média e baixa tensão, subestações abrigadas e estudos de proteção" },
+    { title: "Energia Solar Fotovoltaica", detail: "Dimensionamento, engenharia executiva e implantação turnkey de usinas" },
+    { title: "Gestão e Monitoramento 24/7", detail: "Acompanhamento de ativos, análise de desempenho e diagnóstico remoto automatizado" },
+    { title: "Eletropostos & Mobilidade", detail: "Dimensionamento e infraestrutura elétrica para recarga de veículos elétricos (VE)" },
+    { title: "Automação & Soluções Inteligentes", detail: "Instrumentação, controle de injeção, supervisão predial e eficiência energética" },
   ]
 };
 
@@ -44,16 +44,16 @@ function StatementCardsList({ mobile = false }: { mobile?: boolean }) {
             <TechBadgeSvg />
           </div>
           <h3 className="statement-heading">
-            Engenharia
+            Consultoria
             <br />
-            &amp; Energia Solar
+            Regulatória
           </h3>
           <div className="statement-card-paragraph-wrap">
             <p className="paragraph center-align">
               <span>
-                Projetos elétricos,{" "}
+                Análise de estudos de conexão,{" "}
                 <span className="circulado">
-                  usinas solares
+                  inversão de fluxo
                   <svg
                     viewBox="0 0 180 64"
                     preserveAspectRatio="none"
@@ -93,10 +93,10 @@ function StatementCardsList({ mobile = false }: { mobile?: boolean }) {
                 <br />
               </span>
               <span>
-                geração distribuída, média e baixa tensão,
+                orçamentos, procedimentos das distribuidoras
                 <br />
               </span>
-              <span>proteção, subestações e diagramas executivos.</span>
+              <span>e suporte técnico-jurídico em processos de MMGD.</span>
             </p>
           </div>
         </div>
@@ -116,9 +116,9 @@ function StatementCardsList({ mobile = false }: { mobile?: boolean }) {
             <TechBadgeSvg />
           </div>
           <h3 className="statement-heading">
-            Regulação &amp;
+            Engenharia
             <br />
-            Consultoria
+            Elétrica MT/BT
           </h3>
           <div className="statement-card-paragraph-wrap">
             <div className="second-icon">
@@ -153,14 +153,14 @@ function StatementCardsList({ mobile = false }: { mobile?: boolean }) {
             </div>
             <p className="paragraph center-align">
               <span>
-                Auditoria de inversão de fluxo (PRODIST/ANEEL),
+                Projetos elétricos industriais e prediais,
                 <br />
               </span>
               <span>
-                contestação fundamentada de pareceres de acesso,
+                subestações abrigadas, entradas de energia,
                 <br />
               </span>
-              <span>orçamentos de conexão e conformidade regulatória.</span>
+              <span>coordenação de proteção e diagramas executivos.</span>
             </p>
           </div>
         </div>
@@ -180,21 +180,21 @@ function StatementCardsList({ mobile = false }: { mobile?: boolean }) {
             <TechBadgeSvg />
           </div>
           <h3 className="statement-heading">
-            Eletropostos &amp;
+            Energia Solar
             <br />
-            Mobilidade
+            &amp; Usinas
           </h3>
           <div className="statement-card-paragraph-wrap">
             <p className="paragraph center-align">
               <span>
-                Infraestrutura elétrica para recarga VE,
+                Engenharia fotovoltaica executiva ponta a ponta,
                 <br />
               </span>
               <span>
-                carregadores AC (22 kW) e DC rápidos (30 a 120 kW),
+                dimensionamento e homologação preventiva,
                 <br />
               </span>
-              <span>balanceamento de carga dinâmico e NBR 17019.</span>
+              <span>usinas de solo, coberturas e geração distribuída.</span>
             </p>
           </div>
         </div>
@@ -214,21 +214,21 @@ function StatementCardsList({ mobile = false }: { mobile?: boolean }) {
             <TechBadgeSvg />
           </div>
           <h3 className="statement-heading">
-            Automação &amp;
+            Gestão &amp;
             <br />
-            Telemetria
+            Eletromobilidade
           </h3>
           <div className="statement-card-paragraph-wrap">
             <p className="paragraph center-align">
               <span>
-                Sistemas de controle de exportação (Zero Export),
+                Monitoramento inteligente 24/7 de usinas solares,
                 <br />
               </span>
               <span>
-                integração industrial via Modbus e telemetria,
+                infraestrutura de eletropostos AC/DC para VE
                 <br />
               </span>
-              <span>supervisórios e inteligência operacional de energia.</span>
+              <span>e soluções de automação e controle energético.</span>
             </p>
           </div>
         </div>
@@ -246,7 +246,7 @@ export function Specialties() {
             <div data-sequence-prato="" className="sequence-prato">
               <img
                 src="/assets/images/lucas-about.webp"
-                alt="Infraestrutura Elétrica e Usinas Renovera"
+                alt="Capacidade Técnica e Engenharia Renovera"
                 className="sequence-prato-img"
                 loading="lazy"
               />
@@ -318,13 +318,13 @@ export function Specialties() {
                   fontSize={34}
                 >
                   <text x={0} y={38}>
-                    soluções técnicas
+                    engenharia de rede,
                   </text>
                   <text x={18} y={76}>
-                    com rigor de rede,
+                    segurança jurídica &amp;
                   </text>
                   <text x={36} y={115}>
-                    normas &amp; gestão
+                    gestão de ativos
                   </text>
                 </g>
               </svg>
@@ -343,13 +343,13 @@ export function Specialties() {
                   fontSize={34}
                 >
                   <text x={0} y={38}>
-                    soluções técnicas
+                    engenharia de rede,
                   </text>
                   <text x={18} y={76}>
-                    com rigor de rede,
+                    segurança jurídica &amp;
                   </text>
                   <text x={36} y={115}>
-                    normas &amp; gestão
+                    gestão de ativos
                   </text>
                 </g>
               </svg>
@@ -367,7 +367,7 @@ export function Specialties() {
           <div className="complementary-bar">
             <div className="complementary-bar-header">
               <h3 className="complementary-bar-title">
-                Frentes Complementares &amp; Domínio Multidisciplinar
+                Seis Áreas de Especialidade Técnica
               </h3>
               <span
                 style={{
@@ -375,11 +375,11 @@ export function Specialties() {
                   color: "var(--color-text-secondary)",
                 }}
               >
-                Engenharia de Conexão • Energia Solar • Mobilidade Elétrica • Consultoria Regulatória
+                Consultoria Regulatória • Engenharia Elétrica • Usinas Solares • Gestão 24/7 • Eletropostos • Automação
               </span>
             </div>
             <div className="complementary-pills">
-              {COMPLEMENTARY_AREAS_RENOVERA.areas.map((area) => (
+              {SPECIALTIES_RENOVERA.areas.map((area) => (
                 <span
                   key={area.title}
                   className="complementary-pill"

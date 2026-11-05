@@ -1,106 +1,51 @@
 import React from "react";
 import { ActionButton } from "./icons";
-
-const SHOWCASE_RENOVERA = {
-  sectionTitle: "Um projeto. Múltiplas camadas de engenharia.",
-  sectionSubtitle: "Da concepção técnica à integração dos sistemas.",
-  ctaLabel: "Ver Ficha Técnica",
-  demoCtaLabel: "Consultar Solução",
-  stages: [
-    {
-      id: "estudos-viabilidade",
-      shortNavLabel: "01 Viabilidade",
-      subtitle: "Estudos Preliminares & Regulação",
-      titleLine1: "Diagnóstico Elétrico",
-      titleLine2: "& Enquadramento Tarifário",
-      description: "Avaliação técnica da capacidade de atendimento da subestação, cálculo de curva de carga e enquadramento tarifário ótimo (Grupo A e Grupo B).",
-      technologies: ["PRODIST", "PRORET", "Cálculo de Demanda", "Análise Tarifária"],
-      demoUrl: "/solucoes/viabilidade",
-      githubUrl: "/projetos/reavaliacao-inversao-fluxo-mmgd",
-    },
-    {
-      id: "engenharia-eletrica",
-      shortNavLabel: "02 Projetos Elétricos",
-      subtitle: "Média e Baixa Tensão",
-      titleLine1: "Engenharia Executiva",
-      titleLine2: "& Subestações Abrigadas",
-      description: "Diagramas unifilares detalhados, cabines primárias em 13,8 kV a 34,5 kV, estudos de coordenação de relés e prontuário NBR 14039.",
-      technologies: ["NBR 14039", "NBR 5410", "Diagramas Unifilares", "Subestações"],
-      demoUrl: "/solucoes/projetos-eletricos",
-      githubUrl: "/projetos/usina-solar-comercial-300kwp",
-    },
-    {
-      id: "geracao-fotovoltaica",
-      shortNavLabel: "03 Usinas Solares",
-      subtitle: "Geração Distribuída MMGD",
-      titleLine1: "Engenharia Fotovoltaica",
-      titleLine2: "de Alta Performance",
-      description: "Dimensionamento de geradores solares de solo e telhado com análise rigorosa de sombreamento, modelagem de geração e balanço CA/CC.",
-      technologies: ["NBR 16690", "Usinas Fotovoltaicas", "Modelagem de Perdas", "Inversores"],
-      demoUrl: "/solucoes/energia-solar",
-      githubUrl: "/projetos/usina-solar-comercial-300kwp",
-    },
-    {
-      id: "protecao-aterramento",
-      shortNavLabel: "04 Proteção & SPDA",
-      subtitle: "Segurança Operacional",
-      titleLine1: "Coordenação de Proteção",
-      titleLine2: "e Malha de Aterramento",
-      description: "Dimensionamento de malha de terra, parametrização de relés digitais secundários, SPDA estrutural (NBR 5419) e mitigação de transitórios.",
-      technologies: ["NBR 5419", "Relés Secundários", "Malha de Terra", "Seletividade"],
-      demoUrl: "/solucoes/projetos-eletricos",
-      githubUrl: "/projetos",
-    },
-    {
-      id: "automacao-telemetria",
-      shortNavLabel: "05 Automação",
-      subtitle: "Controle Dinâmico de Injeção",
-      titleLine1: "Telemetria Industrial",
-      titleLine2: "& Zero Export",
-      description: "Controladores programáveis industriais para limitação de injeção reversa em milissegundos, integração com multimedidores e telemetria remota.",
-      technologies: ["Modbus TCP", "Zero Export", "Telemetria", "Supervisórios"],
-      demoUrl: "/solucoes/automacao",
-      githubUrl: "/solucoes/automacao",
-    },
-    {
-      id: "mobilidade-eletrica",
-      shortNavLabel: "06 Eletromobilidade",
-      subtitle: "Infraestrutura de Recarga VE",
-      titleLine1: "Eletropostos DC & AC",
-      titleLine2: "de 22 kW a 120 kW",
-      description: "Infraestrutura elétrica dedicada para mobilidade sustentável com carregadores de alta potência, balanceamento dinâmico e conformidade NBR 17019.",
-      technologies: ["NBR 17019", "IEC 61851", "Carregadores Rápidos DC", "OCPP"],
-      demoUrl: "/solucoes/eletropostos",
-      githubUrl: "/solucoes/eletropostos",
-    },
-  ],
-};
+import { INTERACTIVE_SHOWCASE } from "@/config/site";
 
 const PACK_IMAGES = [
   "/assets/images/elements/elem-solar-module.webp",
   "/assets/images/elements/elem-grid-node.webp",
   "/assets/images/elements/elem-pcb-node.webp",
   "/assets/images/elements/elem-bess-unit.webp",
+  "/assets/images/elements/elem-inverter.webp",
+  "/assets/images/elements/elem-ev-charger.webp",
+  "/assets/images/elements/elem-transformer.webp",
+  "/assets/images/elements/elem-workstation.webp",
+  "/assets/images/elements/elem-server-rack.webp",
+];
+
+const STAGE_COMPOSITES = [
+  "/assets/images/power-systems.webp",
+  "/assets/images/solar-engineering.webp",
+  "/assets/images/data-intelligence.webp",
+  "/assets/images/methodology-office.webp",
+  "/assets/images/elements/elem-bess-unit.webp",
+  "/assets/images/elements/elem-inverter.webp",
+  "/assets/images/ai-automation.webp",
+  "/assets/images/automation-editorial.webp",
+  "/assets/images/elements/elem-ev-charger.webp",
 ];
 
 export function DailyMeals() {
+  const { stages, sectionTitle, sectionSubtitle, demoCtaLabel, ctaLabel } = INTERACTIVE_SHOWCASE;
+
   return (
     <section data-inertia="" className="flavour" id="arquitetura">
-      <span id="simuladores" style={{ position: "absolute", top: 0 }} aria-hidden="true" />
+      <span id="solucoes-reno" style={{ position: "absolute", top: 0 }} aria-hidden="true" />
       <div className="flavour-container">
         <div className="flavour-header">
           <div className="flavour-heading-wrap">
             <h2 className="flavour-title">
-              {SHOWCASE_RENOVERA.sectionTitle}
+              {sectionTitle}
             </h2>
             <h3 data-highlight-text="" className="flavour-subline">
-              {SHOWCASE_RENOVERA.sectionSubtitle}
+              {sectionSubtitle}
             </h3>
           </div>
         </div>
 
-        <div className="flavour-layer-pills" role="tablist" aria-label="Camadas de engenharia Renovera">
-          {SHOWCASE_RENOVERA.stages.map((stage, idx) => (
+        <div className="flavour-layer-pills" role="tablist" aria-label="Soluções Oficiais Renovera">
+          {stages.map((stage, idx) => (
             <button
               key={stage.id}
               type="button"
@@ -130,13 +75,13 @@ export function DailyMeals() {
                     transform="rotate(-6 160 45)"
                     fill="currentColor"
                     style={{ fontFamily: "var(--font-mao)" }}
-                    fontSize={29}
+                    fontSize={28}
                   >
                     <text x={0} y={38}>
-                      disciplinas integradas
+                      9 soluções oficiais
                     </text>
                     <text x={18} y={68}>
-                      &amp; rigor executivo
+                      &amp; ecossistema integrado
                     </text>
                   </g>
                 </svg>
@@ -152,13 +97,13 @@ export function DailyMeals() {
                     transform="rotate(-6 160 45)"
                     fill="currentColor"
                     style={{ fontFamily: "var(--font-mao)" }}
-                    fontSize={29}
+                    fontSize={28}
                   >
                     <text x={0} y={38}>
-                      disciplinas integradas
+                      9 soluções oficiais
                     </text>
                     <text x={18} y={68}>
-                      &amp; rigor executivo
+                      &amp; ecossistema integrado
                     </text>
                   </g>
                 </svg>
@@ -233,8 +178,8 @@ export function DailyMeals() {
 
               <div data-flavour-active-art="" className="flavour-composite-stack">
                 <img
-                  src="/assets/images/stages/stage-01-dimensionamento.webp"
-                  alt="Engenharia e Camadas Técnicas Renovera"
+                  src={STAGE_COMPOSITES[0]}
+                  alt="Soluções Técnicas e Produtos Renovera"
                   className="flavour-composite-img"
                   loading="lazy"
                   width={680}
@@ -257,7 +202,7 @@ export function DailyMeals() {
                       <div className="flavour-pack-perspective">
                         <img
                           src={imgSrc}
-                          alt="Equipamentos e Infraestrutura de Energia Renovera"
+                          alt="Equipamentos e Infraestrutura Renovera"
                           className="flavour-pack-img"
                           loading="lazy"
                         />
@@ -290,7 +235,7 @@ export function DailyMeals() {
               type="button"
               data-flavour-slider-left-button=""
               className="flavour-slider-button is-left"
-              aria-label="Disciplina anterior"
+              aria-label="Solução anterior"
             >
               <svg
                 viewBox="0 0 20 20"
@@ -312,7 +257,7 @@ export function DailyMeals() {
               type="button"
               data-flavour-slider-right-button=""
               className="flavour-slider-button is-right"
-              aria-label="Próxima disciplina"
+              aria-label="Próxima solução"
             >
               <svg
                 viewBox="0 0 20 20"
@@ -337,7 +282,7 @@ export function DailyMeals() {
               className="flavour-content-swiper swiper"
             >
               <div className="flavour-content-swiper-wrapper swiper-wrapper">
-                {SHOWCASE_RENOVERA.stages.map((stage) => (
+                {stages.map((stage) => (
                   <div
                     key={stage.id}
                     className="flavour-content-slide swiper-slide"
@@ -365,15 +310,18 @@ export function DailyMeals() {
                       </div>
                       <div className="flavour-cta-group">
                         <ActionButton
-                          href={stage.demoUrl}
-                          label={SHOWCASE_RENOVERA.demoCtaLabel}
+                          href={`https://wa.me/5519996514827?text=${encodeURIComponent(
+                            `Olá! Gostaria de falar com um especialista sobre a solução ${stage.titleLine1} (${stage.titleLine2}).`
+                          )}`}
+                          external
+                          label={demoCtaLabel}
                           variant="dark"
                         />
                         <a
                           href={stage.githubUrl}
                           className="flavour-github-link"
                         >
-                          <span>{SHOWCASE_RENOVERA.ctaLabel}</span>
+                          <span>{ctaLabel}</span>
                           <span aria-hidden="true">→</span>
                         </a>
                       </div>

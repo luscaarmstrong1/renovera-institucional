@@ -300,15 +300,15 @@ export function Creditos() {
       <div className={`footer-credits${open ? " is-open" : ""}`}>
         <div className="footer-credits-inner">
           <div className="footer-credits-detail">
-            <div className="footer-credits-text">Engenharia & Código</div>
+            <div className="footer-credits-text">Engenharia &amp; Tecnologia</div>
             <a
-              href="https://github.com/luscaarmstrong1"
+              href="https://renovera.com.br"
               target="_blank"
               rel="noopener noreferrer"
               className="credits-link w-inline-block"
             >
               <div className="credits-link-wrap">
-                <div className="credits-link-text">Lucas Silva Santos</div>
+                <div className="credits-link-text">Renovera Energias Renováveis</div>
               </div>
             </a>
           </div>
