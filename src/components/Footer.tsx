@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { SITE, SOCIAL_LINKS } from "@/config/site";
-import { LinkedInIcon, MailIcon } from "./icons";
+import { LinkedInIcon, InstagramIcon, FacebookIcon, MailIcon } from "./icons";
 import { FinalCTA } from "./FinalCTA";
 
 export function Footer() {
@@ -67,19 +67,24 @@ export function Footer() {
               Energias Renováveis
             </h4>
             <div className="footer-shipping-wrapper">
-              <span className="shipping-link w-inline-block">
+              <a href="/sobre" className="shipping-link w-inline-block">
                 <div className="shipping-link-wrap">
                   <div className="shipping-link-text">
-                    Engenharia • Energia • Regulação
+                    Institucional • Desde {SITE.officialStats.foundedYear}
                   </div>
                 </div>
-              </span>
-              <a href="#projetos" className="shipping-link w-inline-block">
+              </a>
+              <a href="/solucoes" className="shipping-link w-inline-block">
                 <div className="shipping-link-wrap">
-                  <div className="shipping-link-text">Projetos em destaque</div>
+                  <div className="shipping-link-text">Portfólio Renô (9 Soluções)</div>
                 </div>
               </a>
-              <a href="#contato" className="shipping-link w-inline-block">
+              <a href="/projetos" className="shipping-link w-inline-block">
+                <div className="shipping-link-wrap">
+                  <div className="shipping-link-text">Arquiteturas &amp; Estudos Técnicos</div>
+                </div>
+              </a>
+              <a href="/contato" className="shipping-link w-inline-block">
                 <div className="shipping-link-wrap">
                   <div className="shipping-link-text">Canais de Atendimento</div>
                 </div>
@@ -87,14 +92,14 @@ export function Footer() {
               <a href="/privacidade" className="shipping-link w-inline-block">
                 <div className="shipping-link-wrap">
                   <div className="shipping-link-text">
-                    Política de privacidade
+                    Política de Privacidade (LGPD)
                   </div>
                 </div>
               </a>
               <a href="/termos" className="shipping-link w-inline-block">
                 <div className="shipping-link-wrap">
                   <div className="shipping-link-text">
-                    Termos de uso
+                    Termos de Uso &amp; Compliance
                   </div>
                 </div>
               </a>
@@ -105,16 +110,38 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-media-link w-inline-block"
-                aria-label="LinkedIn"
+                aria-label="LinkedIn Oficial (@renoveraoficial)"
               >
                 <div className="social-media-circle is-white">
                   <LinkedInIcon />
                 </div>
               </a>
               <a
+                href={SOCIAL_LINKS.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-media-link w-inline-block"
+                aria-label="Instagram Oficial (@renoveraoficial)"
+              >
+                <div className="social-media-circle is-white">
+                  <InstagramIcon />
+                </div>
+              </a>
+              <a
+                href={SOCIAL_LINKS.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-media-link w-inline-block"
+                aria-label="Facebook Oficial (@renoveraoficial)"
+              >
+                <div className="social-media-circle is-white">
+                  <FacebookIcon />
+                </div>
+              </a>
+              <a
                 href={`mailto:${SITE.email}`}
                 className="social-media-link w-inline-block"
-                aria-label="E-mail"
+                aria-label="E-mail Comercial (contato@renovera.com.br)"
               >
                 <div className="social-media-circle is-white">
                   <MailIcon />
@@ -136,10 +163,13 @@ export function Footer() {
           className="footer-bottom"
         >
           <div className="footer-bottom-text">
-            © 2026 {SITE.fullName}. Todos os direitos reservados.
+            © 2026 {SITE.fullName}. Todos os direitos reservados. • {SITE.location}
           </div>
           <div className="footer-creditos text-xs text-[#D1DFD8]">
-            Engenharia Elétrica &amp; Soluções em Energia Sustentável
+            Ética &amp; Compliance:{" "}
+            <a href={`mailto:${SITE.complianceEmail}`} className="underline hover:text-[#FED15D]">
+              {SITE.complianceEmail}
+            </a>
           </div>
         </div>
       </div>

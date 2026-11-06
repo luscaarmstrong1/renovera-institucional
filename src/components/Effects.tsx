@@ -1090,13 +1090,26 @@ export function Effects() {
       textSwiper.controller.control = visualSwiper;
 
       const pillButtons = queryAll<HTMLButtonElement>("[data-flavour-pill]");
+      const artItems = queryAll<HTMLImageElement>("[data-flavour-art-item]");
+      const activePanel = queryOne<HTMLElement>("#reno-active-panel");
+      const totalPills = pillButtons.length;
+
       const syncPills = () => {
         const activeIdx = visualSwiper.realIndex ?? 0;
         pillButtons.forEach((btn, idx) => {
           const isActive = idx === activeIdx;
           btn.classList.toggle("is-active", isActive);
           btn.setAttribute("aria-selected", isActive ? "true" : "false");
+          btn.setAttribute("tabindex", isActive ? "0" : "-1");
         });
+        artItems.forEach((img, idx) => {
+          const isActive = idx === activeIdx;
+          img.classList.toggle("is-active", isActive);
+          img.style.display = isActive ? "block" : "none";
+        });
+        if (activePanel) {
+          activePanel.setAttribute("aria-labelledby", `reno-tab-${activeIdx}`);
+        }
       };
 
       visualSwiper.on("slideChange", syncPills);
@@ -1105,8 +1118,30 @@ export function Effects() {
           const idx = Number(btn.getAttribute("data-flavour-pill") || "0");
           visualSwiper.slideToLoop(idx, 600);
         };
+        const onKeyDown = (ev: KeyboardEvent) => {
+          const currentIdx = Number(btn.getAttribute("data-flavour-pill") || "0");
+          let nextIdx: number | null = null;
+          if (ev.key === "ArrowRight" || ev.key === "ArrowDown") {
+            nextIdx = (currentIdx + 1) % totalPills;
+          } else if (ev.key === "ArrowLeft" || ev.key === "ArrowUp") {
+            nextIdx = (currentIdx - 1 + totalPills) % totalPills;
+          } else if (ev.key === "Home") {
+            nextIdx = 0;
+          } else if (ev.key === "End") {
+            nextIdx = totalPills - 1;
+          }
+          if (nextIdx !== null) {
+            ev.preventDefault();
+            visualSwiper.slideToLoop(nextIdx, 600);
+            pillButtons[nextIdx]?.focus({ preventScroll: true });
+          }
+        };
         btn.addEventListener("click", onClick);
-        cleanups.push(() => btn.removeEventListener("click", onClick));
+        btn.addEventListener("keydown", onKeyDown);
+        cleanups.push(() => {
+          btn.removeEventListener("click", onClick);
+          btn.removeEventListener("keydown", onKeyDown);
+        });
       });
       syncPills();
 

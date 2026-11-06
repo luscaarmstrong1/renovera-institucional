@@ -8,17 +8,20 @@ export const navigationConfig: NavItem[] = [
   { label: "Início", href: "/" },
   { label: "Sobre", href: "/sobre" },
   {
-    label: "Soluções",
+    label: "Soluções Renô",
     href: "/solucoes",
     children: [
-      { label: "Consultoria Regulatória", href: "/solucoes/consultoria-regulatoria", description: "Inversão de fluxo e processos de acesso" },
-      { label: "Projetos Elétricos", href: "/solucoes/projetos-eletricos", description: "Média e baixa tensão, subestações e diagramas" },
-      { label: "Energia Solar", href: "/solucoes/energia-solar", description: "Usinas fotovoltaicas e geração distribuída" },
-      { label: "Eletropostos", href: "/solucoes/eletropostos", description: "Infraestrutura de recarga para veículos elétricos" },
-      { label: "Automação e Controle", href: "/solucoes/automacao", description: "Telemetria, controle dinâmico e monitoramento" },
-      { label: "Estudos de Viabilidade", href: "/solucoes/viabilidade", description: "Diagnósticos técnicos e planejamento energético" }
+      { label: "Renô Adviser™", href: "/solucoes/reno-adviser", description: "Assessoria em homologação e inversão de fluxo" },
+      { label: "Renô Projetos", href: "/solucoes/reno-projetos", description: "Usinas fotovoltaicas turnkey ponta a ponta" },
+      { label: "Renô Performance", href: "/solucoes/reno-performance", description: "Monitoramento ativo 24/7 e gestão de dados" },
+      { label: "Renô Invest", href: "/solucoes/reno-invest", description: "Estruturação de investimentos em ativos solares" },
+      { label: "Renô Protect", href: "/solucoes/reno-protect", description: "Seguro especializado para usinas solares" },
+      { label: "Renô Supply", href: "/solucoes/reno-supply", description: "Central de suprimentos com análise técnica prévia" },
+      { label: "Renô Engenharia", href: "/solucoes/reno-engenharia", description: "Bombeamento solar, automação, luminotécnica e CFTV" },
+      { label: "Renô Partner", href: "/solucoes/reno-partner", description: "Programa de parceria para integradores homologados" },
+      { label: "Renô Energy Hub", href: "/solucoes/reno-energy-hub", description: "Subestações MT/BT, padrões de entrada e recarga VE" }
     ]
   },
-  { label: "Projetos", href: "/projetos" },
+  { label: "Capacidade Técnica", href: "/projetos" },
   { label: "Contato", href: "/contato" }
 ];

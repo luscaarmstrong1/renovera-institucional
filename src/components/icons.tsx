@@ -2,23 +2,13 @@
 
 import React, { useState } from "react";
 
-/**
- * Geometric stroke paths spelling "LUCAS" in monumental technical strokes
- * Compatible with GSAP stroke-dashoffset animation (`data-traco` / `data-ponto`).
- */
 const LOGO_PATHS = [
-  // L
   "M56 140V580H290",
-  // U
   "M370 140V445A135 135 0 0 0 640 445V140",
-  // C
   "M1010 235A165 165 0 1 0 1010 495",
-  // A
   "M1110 580L1265 140L1420 580",
   "M1158 440H1372",
-  // S
   "M1775 215C1730 140 1520 140 1520 255C1520 390 1790 340 1790 475C1790 590 1565 590 1510 505",
-  // Technical accent bar
   "M1880 580H2010",
 ];
 
@@ -74,6 +64,42 @@ export function LinkedInIcon({ className = "social-media-icon" }: { className?: 
       aria-hidden="true"
     >
       <path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002ZM7 8.48H3V21h4V8.48Zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68Z" />
+    </svg>
+  );
+}
+
+export function InstagramIcon({ className = "social-media-icon" }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.9"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <rect x="2.5" y="2.5" width="19" height="19" rx="5" />
+      <circle cx="12" cy="12" r="4.2" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+export function FacebookIcon({ className = "social-media-icon" }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M13.5 21v-7.5h2.6l.4-3h-3v-1.9c0-.9.3-1.5 1.6-1.5H16.7V4.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.1H7.7v3h2.6V21h3.2Z" />
     </svg>
   );
 }
@@ -166,9 +192,6 @@ export function EnviarIcon({ className }: { className?: string }) {
   );
 }
 
-/**
- * Technical Engineering Emblem (replaces SmileySvg)
- */
 export function TechBadgeSvg() {
   return (
     <svg viewBox="0 0 64 64" aria-hidden="true" fill="none">
@@ -193,7 +216,7 @@ export function TechBadgeSvg() {
         strokeWidth="2.4"
         strokeLinecap="round"
         strokeLinejoin="round"
-        fill="rgba(211, 161, 92, 0.18)"
+        fill="rgba(254, 209, 93, 0.22)"
       />
     </svg>
   );

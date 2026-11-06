@@ -48,9 +48,12 @@ export function DailyMeals() {
           {stages.map((stage, idx) => (
             <button
               key={stage.id}
+              id={`reno-tab-${idx}`}
               type="button"
               role="tab"
               aria-selected={idx === 0}
+              aria-controls="reno-active-panel"
+              tabIndex={idx === 0 ? 0 : -1}
               data-flavour-pill={idx}
               className={`flavour-layer-pill${idx === 0 ? " is-active" : ""}`}
             >
@@ -177,14 +180,19 @@ export function DailyMeals() {
               </div>
 
               <div data-flavour-active-art="" className="flavour-composite-stack">
-                <img
-                  src={STAGE_COMPOSITES[0]}
-                  alt="Soluções Técnicas e Produtos Renovera"
-                  className="flavour-composite-img"
-                  loading="lazy"
-                  width={680}
-                  height={510}
-                />
+                {STAGE_COMPOSITES.map((artSrc, idx) => (
+                  <img
+                    key={artSrc}
+                    src={artSrc}
+                    alt={`${stages[idx]?.titleLine1 ?? "Solução Renovera"} — ${stages[idx]?.titleLine2 ?? "Apresentação Técnica"}`}
+                    data-flavour-art-item={idx}
+                    className={`flavour-composite-img${idx === 0 ? " is-active" : ""}`}
+                    style={{ display: idx === 0 ? "block" : "none" }}
+                    loading={idx === 0 ? "eager" : "lazy"}
+                    width={680}
+                    height={510}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -202,7 +210,7 @@ export function DailyMeals() {
                       <div className="flavour-pack-perspective">
                         <img
                           src={imgSrc}
-                          alt="Equipamentos e Infraestrutura Renovera"
+                          alt={`Equipamento e Infraestrutura — ${stages[idx]?.titleLine1 ?? "Renovera"}`}
                           className="flavour-pack-img"
                           loading="lazy"
                         />
@@ -276,7 +284,12 @@ export function DailyMeals() {
             </button>
           </div>
 
-          <div className="flavour-center">
+          <div
+            className="flavour-center"
+            id="reno-active-panel"
+            role="tabpanel"
+            aria-labelledby="reno-tab-0"
+          >
             <div
               data-flavour-content-slider=""
               className="flavour-content-swiper swiper"

@@ -26,8 +26,8 @@ export function ProjectsCarousel() {
       <div data-testimonial-parallax="" className="bg-img-wrapper">
         <img
           className="bg-img projects-bg-main"
-          src="/assets/images/projects-bg-webdev.webp"
-          alt="Infraestrutura técnica de engenharia elétrica, projetos solares e redes de potência"
+          src="/assets/renovera/hero/hero-solar-plant.webp"
+          alt="Infraestrutura técnica de engenharia elétrica, usinas solares e redes de potência Renovera"
           data-testimonial-parallax-item=""
         />
         <div className="projects-bg-gradient" aria-hidden="true" />
@@ -214,12 +214,18 @@ export function ProjectsCarousel() {
                             <GlobeLinkIcon className="testimonial-star testimonial-insta" />
                             <span>{project.siteDomain}</span>
                           </div>
-                          <div className="testimonial-verified-wrap">
+                          <div
+                            className="testimonial-verified-wrap"
+                            style={{ flexDirection: "column", alignItems: "flex-end", gap: "0.2rem" }}
+                          >
+                            <span className="text-[0.65rem] font-bold uppercase tracking-wider text-[#0A4B2D] bg-[#E8F0EC] px-2 py-0.5 rounded">
+                              {project.metricsBadge}
+                            </span>
                             <div
                               className="testimonial-verified-text"
                               style={{ fontWeight: 600 }}
                             >
-                              Ver Solução →
+                              Ver Arquitetura →
                             </div>
                           </div>
                         </div>

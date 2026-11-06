@@ -2084,7 +2084,7 @@ body.has-mobile-menu-open {
   padding: 0.2rem 0.55rem;
   border-radius: 6px;
   background: rgba(3, 49, 24, 0.08);
-  color: var(--color-navy-tech, #102B42);
+  color: var(--color-navy-tech, #033118);
   border: 1px solid rgba(3, 49, 24, 0.14);
 }
 

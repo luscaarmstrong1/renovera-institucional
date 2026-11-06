@@ -44,6 +44,16 @@ export const SITE = {
       detail: 'Equipe multidisciplinar em engenharia, legislação e gestão de usinas',
     },
   ],
+  officialStats: {
+    adviserPlantsSold: '450+',
+    adviserCapacityMWp: '30 MWp',
+    adviserStatesServed: '15 Estados',
+    projectsPlantsInstalled: '100+',
+    projectsCapacityMWp: '2 MWp',
+    projectsStatesServed: '12 Estados',
+    totalPlantsDelivered: '+150',
+    foundedYear: 2020,
+  },
   about: {
     title: 'Uma empresa. Um ecossistema de soluções.',
     subtitle: 'Engenharia, conhecimento e inovação para transformar o setor energético.',
@@ -51,7 +61,7 @@ export const SITE = {
       'Fundada em 2020, a Renovera desenvolve soluções para o mercado de energia, integrando engenharia elétrica, análise regulatória profunda, gestão de ativos e tecnologia.',
       'Sua atuação contempla diferentes etapas do ciclo de um empreendimento, desde a avaliação inicial e estruturação técnica até a implantação, o acompanhamento e a gestão operacional.',
       'Somos referência em conectar a força técnica da engenharia ao embasamento técnico-regulatório e jurídico perante concessionárias de energia, descomplicando processos de conexão e geração distribuída.',
-      'Do estudo de inversão de fluxo à entrega de usinas completas e infraestrutura de recarga veicular, a Renovera entrega previsibilidade, segurança e máxima rentabilidade aos seus parceiros e clientes.',
+      'Do estudo de inversão de fluxo à entrega de usinas completas e infraestrutura de recarga veicular, a Renovera entrega previsibilidade técnica, conformidade normativa e eficiência operacional aos seus parceiros e clientes.',
     ],
   },
   ctas: {
@@ -76,8 +86,9 @@ export const SITE = {
   linkedinHandle: '@renoveraoficial',
   instagram: SOCIAL_LINKS.instagram,
   instagramHandle: '@renoveraoficial',
-  contato: '/contato/',
-  avaliacao: '/contato/',
+  facebook: SOCIAL_LINKS.facebook,
+  contato: '/contato',
+  avaliacao: '/contato',
   api: '/api/contact',
 } as const;
 
@@ -110,8 +121,10 @@ export interface RenoProduct {
   description: string;
   highlights: string[];
   audience: string;
+  idealFor: string[];
   deliverables: string[];
   image: string;
+  icon: string;
   slug: string;
   tag: string;
 }
@@ -124,7 +137,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
     category: "Consultoria Regulatória & Conexão",
     headline: "Assessoria Especializada em Homologação e Conexão na Rede",
     description:
-      "Assessoria especializada em homologação de projetos fotovoltaicos de ponta a ponta. Atuamos na reversão de indeferimentos, com foco principal em Inversão de Fluxo de Potência, solucionando quaisquer entraves técnicos ou regulatórios impostos pelas concessionárias perante o PRODIST e resoluções da ANEEL.",
+      "Assessoria especializada em homologação de projetos fotovoltaicos de ponta a ponta. Atuamos na reversão de indeferimentos, com foco principal em Inversão de Fluxo de Potência, solucionando entraves técnicos ou regulatórios impostos pelas concessionárias perante o PRODIST e resoluções da ANEEL.",
     highlights: [
       "Homologação ponta a ponta junto a distribuidoras",
       "Reversão técnica e administrativa de indeferimentos",
@@ -132,6 +145,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Fundamentação estrita no Marco Legal e REN ANEEL nº 1.000/2021"
     ],
     audience: "Integradores solares, investidores, empreendimentos comerciais e indústrias com processos de conexão pendentes.",
+    idealFor: ["Integradores", "Empresas"],
     deliverables: [
       "Parecer Técnico de Auditoria de Fluxo",
       "Peça de Recurso Administrativo Fundamentada",
@@ -139,6 +153,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Acompanhamento até a emissão conclusiva do Parecer de Acesso"
     ],
     image: "/assets/renovera/produtos/reno-01-adviser.webp",
+    icon: "/assets/renovera/solucoes/icon-reno-adviser.svg",
     slug: "reno-adviser",
     tag: "Homologação & Conexão"
   },
@@ -149,14 +164,15 @@ export const RENO_PRODUCTS: RenoProduct[] = [
     category: "Usinas Fotovoltaicas Ponta a Ponta",
     headline: "Serviço Completo Turnkey de Usinas Fotovoltaicas",
     description:
-      "O Renô Projetos é o serviço 'ponta a ponta' da Renovera. Cuidamos de todas as etapas: engenharia executiva, aquisição dos melhores equipamentos mundiais, montagem com alto rigor técnico e homologação. Inclui a expertise preventiva do Renô Adviser™ para garantir conexão sem entraves.",
+      "O Renô Projetos é o serviço 'ponta a ponta' da Renovera. Cuidamos de todas as etapas: engenharia executiva, aquisição de equipamentos selecionados, montagem com rigor técnico e homologação. Inclui a expertise preventiva do Renô Adviser™ na condução do acesso junto à concessionária.",
     highlights: [
       "Engenharia executiva completa em MT e BT",
       "Compra direta de equipamentos de padrão mundial",
       "Instalação qualificada e comissionamento",
-      "Homologação preventiva inclusa com aprovação na concessionária"
+      "Homologação preventiva inclusa junto à concessionária"
     ],
-    audience: "Empresas, indústrias, propriedades rurais e investidores que desejam investir em geração solar sem riscos operacionais.",
+    audience: "Empresas, indústrias, propriedades rurais, condomínios e investidores que buscam implantar geração solar com engenharia executiva e gestão técnica integrada.",
+    idealFor: ["Empresas", "Condomínios"],
     deliverables: [
       "Projeto Executivo CC e CA com ART",
       "Memorial Descritivo do Gerador Fotovoltaico",
@@ -164,6 +180,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Documentação As-Built e Prontuário de Instalação"
     ],
     image: "/assets/renovera/produtos/reno-02-projetos.webp",
+    icon: "/assets/renovera/solucoes/icon-reno-projetos.svg",
     slug: "reno-projetos",
     tag: "Usinas Completas"
   },
@@ -174,14 +191,15 @@ export const RENO_PRODUCTS: RenoProduct[] = [
     category: "Monitoramento e Inteligência Operacional",
     headline: "Gestão de Dados e Monitoramento Inteligente 24/7",
     description:
-      "Serviço de gestão de dados contínuo que monitora o desempenho da sua usina solar para assegurar máxima produtividade e rentabilidade. Identifica quedas de geração causadas por sujidade, falhas em strings ou anomalias elétricas, emitindo alertas imediatos e iniciando diagnóstico remoto automatizado.",
+      "Serviço de gestão de dados contínuo que monitora o desempenho da sua usina solar para assegurar alta disponibilidade e eficiência operacional. Identifica quedas de geração causadas por sujidade, falhas em strings ou anomalias elétricas, emitindo alertas imediatos e iniciando diagnóstico remoto automatizado.",
     highlights: [
       "Monitoramento ativo 24/7 em tempo real",
       "Detecção preditiva de sujidade, sombras e perdas",
       "Diagnóstico remoto de inversores e componentes",
-      "Relatórios periódicos de produtividade e rentabilidade financeira"
+      "Relatórios periódicos de produtividade e desempenho energético"
     ],
-    audience: "Proprietários de usinas solares de geração própria ou remota e gestores de portfólios fotovoltaicos.",
+    audience: "Proprietários de usinas solares de geração própria ou remota, empresas e gestores de portfólios fotovoltaicos.",
+    idealFor: ["Empresas", "Investidores"],
     deliverables: [
       "Dashboard de Telemetria Integrado",
       "Painel de Alertas em Tempo Real",
@@ -189,6 +207,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Plano de Ação Corretiva para Manutenção Preventiva"
     ],
     image: "/assets/renovera/produtos/reno-03-performance.webp",
+    icon: "/assets/renovera/solucoes/icon-reno-performance.svg",
     slug: "reno-performance",
     tag: "Monitoramento 24/7"
   },
@@ -199,14 +218,15 @@ export const RENO_PRODUCTS: RenoProduct[] = [
     category: "Investimentos em Energia Sustentável",
     headline: "Investimento Estruturado em Ativos Solares",
     description:
-      "Solução voltada para investidores que buscam rentabilidade consistente através da geração distribuída. Viabilizamos o empreendimento de ponta a ponta: análise minuciosa de viabilidade econômico-financeira, prospecção e locação de áreas ideais, implantação de usina e integração nativa ao Renô Performance.",
+      "Solução voltada para investidores que buscam retorno consistente através da geração distribuída. Viabilizamos o empreendimento de ponta a ponta: análise minuciosa de viabilidade econômico-financeira, prospecção e locação de áreas ideais, implantação de usina e integração nativa ao Renô Performance.",
     highlights: [
       "Análise de viabilidade financeira completa (VPL, TIR e Payback)",
       "Prospecção, negociação e locação de terrenos estratégicos",
-      "Engenharia, construção e homologação garantidas",
-      "Monitoramento ativo e suporte à comercialização dos créditos"
+      "Engenharia executiva, construção e condução integral da homologação",
+      "Monitoramento ativo e suporte à gestão de créditos energéticos"
     ],
-    audience: "Investidores institucionais, family offices e proprietários de terras interessados em transformar sol em fluxo de caixa.",
+    audience: "Investidores institucionais, family offices, condomínios e proprietários de terras interessados em estruturar ativos de geração solar.",
+    idealFor: ["Investidores", "Condomínios"],
     deliverables: [
       "Modelagem Financeira e Estudo de Retorno",
       "Laudo de Viabilidade Fundiária e de Acesso à Rede",
@@ -214,8 +234,9 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Contratos Operacionais e de Gestão de Ativos"
     ],
     image: "/assets/renovera/produtos/reno-04-invest.webp",
+    icon: "/assets/renovera/solucoes/icon-reno-invest.svg",
     slug: "reno-invest",
-    tag: "Ativos & Rentabilidade"
+    tag: "Ativos & Viabilidade"
   },
   {
     id: "reno-protect",
@@ -224,20 +245,22 @@ export const RENO_PRODUCTS: RenoProduct[] = [
     category: "Proteção Patrimonial & Riscos Climáticos",
     headline: "Seguro Especializado para Usinas e Ativos Fotovoltaicos",
     description:
-      "Seguro desenhado especificamente para as necessidades técnicas do setor solar. Protege seu investimento contra danos da natureza (vendavais, tempestades de granizo, raios), panes e danos elétricos, além de cobertura contra roubo e furto de módulos, cabos e inversores.",
+      "Seguro desenhado especificamente para as necessidades técnicas do setor solar. Protege seu ativo contra danos da natureza (vendavais, tempestades de granizo, raios), panes e danos elétricos, além de cobertura contra roubo e furto de módulos, cabos e inversores conforme apólice contratada.",
     highlights: [
       "Cobertura contra eventos climáticos severos (vendaval e granizo)",
       "Proteção contra descargas atmosféricas e danos elétricos",
-      "Cobertura ampla de roubo e furto qualificado de componentes",
+      "Cobertura de roubo e furto qualificado de componentes",
       "Apólices sob medida para usinas de solo e de cobertura"
     ],
-    audience: "Proprietários e operadores de usinas fotovoltaicas comerciais, industriais e de investimento.",
+    audience: "Proprietários e operadores de usinas fotovoltaicas comerciais, industriais, condominiais e de investimento.",
+    idealFor: ["Empresas", "Investidores", "Condomínios"],
     deliverables: [
       "Apólice de Seguro Especializado para Ativos Fotovoltaicos",
       "Condições e Limites de Cobertura Documentados",
       "Suporte Especializado na Regulação de Sinistros Técnicos"
     ],
     image: "/assets/renovera/produtos/reno-05-protect.webp",
+    icon: "/assets/renovera/solucoes/icon-reno-protect.svg",
     slug: "reno-protect",
     tag: "Proteção Patrimonial"
   },
@@ -248,20 +271,22 @@ export const RENO_PRODUCTS: RenoProduct[] = [
     category: "Equipamentos & Suprimentos Fotovoltaicos",
     headline: "Central de Suprimentos com Avaliação Técnica Prévia",
     description:
-      "Sua central de suprimentos de componentes e kits solares. Oferecemos módulos e inversores das melhores marcas mundiais com avaliação técnica prévia da compatibilidade elétrica, evitando divergências de engenharia e retrabalho na montagem em campo.",
+      "Sua central de suprimentos de componentes e kits solares. Oferecemos módulos e inversores de marcas mundiais reconhecidas com avaliação técnica prévia da compatibilidade elétrica, evitando divergências de engenharia e retrabalho na montagem em campo.",
     highlights: [
-      "Módulos e inversores certificados Tier 1",
+      "Módulos e inversores certificados de marcas mundiais",
       "Análise prévia de compatibilidade elétrica de strings e tensão",
       "Logística eficiente e suporte técnico direto para integradores",
-      "Garantia oficial de fabricantes e suporte pós-venda humanizado"
+      "Garantia oficial de fabricantes e suporte pós-venda especializado"
     ],
     audience: "Integradores solares parceiros, instaladores e empresas de engenharia elétrica.",
+    idealFor: ["Integradores", "Empresas"],
     deliverables: [
       "Kits Fotovoltaicos com Dimensionamento Conforme Demanda",
       "Fichas Técnicas e Certificados INMETRO dos Equipamentos",
       "Suporte na Configuração e Parametrização em Campo"
     ],
     image: "/assets/renovera/produtos/reno-06-supply.webp",
+    icon: "/assets/renovera/solucoes/icon-reno-supply.svg",
     slug: "reno-supply",
     tag: "Kits & Equipamentos"
   },
@@ -279,7 +304,8 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Projetos luminotécnicos de alta eficiência para redução de consumo",
       "Sistemas integrados de CFTV com monitoramento patrimonial remoto"
     ],
-    audience: "Condomínios, indústrias, produtores rurais e empreendimentos comerciais.",
+    audience: "Condomínios, residências, indústrias, produtores rurais e empreendimentos comerciais.",
+    idealFor: ["Residências", "Empresas", "Eletropostos"],
     deliverables: [
       "Projetos Executivos Elétricos e de Automação",
       "Plantas Luminotécnicas e Diagramas de CFTV",
@@ -287,6 +313,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "ART de Projeto e Execução"
     ],
     image: "/assets/renovera/produtos/reno-07-engenharia.webp",
+    icon: "/assets/renovera/solucoes/icon-reno-engenharia.svg",
     slug: "reno-engenharia",
     tag: "Multidisciplinar"
   },
@@ -305,6 +332,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Ampliação da capacidade de atendimento e ganho de escala mútuo"
     ],
     audience: "Integradores solares e instaladores qualificados que buscam crescer sem o gargalo dos trâmites regulatórios de concessionária.",
+    idealFor: ["Integradores", "Empresas"],
     deliverables: [
       "Credenciamento Técnico Oficial Renô Partner",
       "Projetos Aprovados Prontos para Execução em Campo",
@@ -312,6 +340,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Remuneração Transparente por Serviço de Instalação Realizado"
     ],
     image: "/assets/renovera/produtos/reno-08-partner.webp",
+    icon: "/assets/renovera/solucoes/icon-reno-partner.svg",
     slug: "reno-partner",
     tag: "Rede de Parceiros"
   },
@@ -327,9 +356,10 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Projetos e execução de subestações abrigadas e aumento de carga",
       "Infraestrutura completa para recarga de veículos elétricos AC e DC",
       "Reforma de padrão de entrada e revisão geral de instalações",
-      "Conformidade total com as normas das distribuidoras de energia"
+      "Conformidade técnica com as normas das distribuidoras de energia"
     ],
-    audience: "Shopping centers, frotas corporativas, indústrias, redes de postos e empreendimentos com alta demanda elétrica.",
+    audience: "Shopping centers, condomínios, frotas corporativas, indústrias, redes de postos e empreendimentos com alta demanda elétrica.",
+    idealFor: ["Empresas", "Condomínios", "Eletropostos"],
     deliverables: [
       "Projeto Executivo de Entrada de Energia e Subestação",
       "Estudo de Demanda e Dimensionamento para Carregadores VE",
@@ -337,6 +367,7 @@ export const RENO_PRODUCTS: RenoProduct[] = [
       "Homologação e Liberação de Carga perante a Distribuidora"
     ],
     image: "/assets/renovera/produtos/reno-09-energy-hub.webp",
+    icon: "/assets/renovera/solucoes/icon-reno-energy-hub.svg",
     slug: "reno-energy-hub",
     tag: "Subestações & VE"
   }
@@ -405,9 +436,9 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     projectType: 'Usinas de Solo e Telhado',
     description:
       'Dimensionamento de geradores solares de alta performance, modelagem de irradiação, distribuição balanceada de strings e engenharia de conexão preventiva perante a distribuidora.',
-    technologies: ['Renô Projetos', 'Geração Distribuída', 'Usinas Solares', 'Alta Eficiência'],
-    siteUrl: '/solucoes/reno-projetos',
-    siteDomain: 'Usinas Solares Homologadas',
+    technologies: ['Renô Projetos', 'Geração Distribuída', 'Usinas Solares', 'NBR 16690'],
+    siteUrl: '/projetos/arquitetura-usina-fotovoltaica-mt-bt',
+    siteDomain: 'Arquitetura Fotovoltaica Homologada',
     image: '/assets/renovera/projetos-v5/proj-01-fotovoltaica.webp',
     metricsBadge: 'Usinas de Alta Performance',
   },
@@ -418,9 +449,9 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     projectType: 'Infraestrutura Elétrica MT/BT',
     description:
       'Cabines primárias abrigadas de 13,8 kV a 34,5 kV, estudos de coordenação e seletividade de relés, adequação de padrões de entrada e projetos elétricos industriais.',
-    technologies: ['Renô Energy Hub', 'Subestações Abrigadas', 'Média Tensão', 'Entrada de Energia'],
-    siteUrl: '/solucoes/reno-energy-hub',
-    siteDomain: 'Subestações & Rede',
+    technologies: ['Renô Energy Hub', 'Subestações Abrigadas', 'Média Tensão', 'NBR 14039'],
+    siteUrl: '/projetos/arquitetura-subestacao-entrada-energia-mt',
+    siteDomain: 'Subestações & Rede Elétrica',
     image: '/assets/renovera/projetos-v5/proj-02-subestacoes.webp',
     metricsBadge: 'Média & Baixa Tensão',
   },
@@ -430,10 +461,10 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     category: '03 — Automação e Controle',
     projectType: 'Telemetria e Diagnóstico Remoto',
     description:
-      'Sistemas de supervisão contínua 24/7, controladores industriais para injeção reversa dinâmica, monitoramento de grandezas elétricas e diagnóstico operacional remoto.',
-    technologies: ['Renô Performance', 'Telemetria 24/7', 'Zero Export', 'Eficiência'],
-    siteUrl: '/solucoes/reno-performance',
-    siteDomain: 'Monitoramento Ativo',
+      'Sistemas de supervisão contínua 24/7, controladores industriais para limitação dinâmica de injeção reversa, monitoramento de grandezas elétricas e diagnóstico operacional remoto.',
+    technologies: ['Renô Performance', 'Telemetria 24/7', 'Zero Export', 'Modbus TCP'],
+    siteUrl: '/projetos/arquitetura-telemetria-controle-zero-export',
+    siteDomain: 'Monitoramento & Controle Ativo',
     image: '/assets/renovera/projetos-v5/proj-03-automacao.webp',
     metricsBadge: 'Gestão Ativa 24/7',
   },
@@ -444,9 +475,9 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     projectType: 'Eletropostos DC e AC',
     description:
       'Planejamento elétrico e implantação de hubs de recarga para frotas corporativas e empreendimentos comerciais (22 kW a 120 kW), com balanceamento de carga e protocolo OCPP.',
-    technologies: ['Eletropostos VE', 'Recarga DC Rápida', 'Balanceamento de Carga', 'Mobilidade'],
-    siteUrl: '/solucoes/reno-energy-hub',
-    siteDomain: 'Infraestrutura de Recarga',
+    technologies: ['Eletropostos VE', 'Recarga DC Rápida', 'Balanceamento de Carga', 'NBR 17019'],
+    siteUrl: '/projetos/arquitetura-hub-recarga-veiculos-eletricos',
+    siteDomain: 'Infraestrutura de Recarga VE',
     image: '/assets/renovera/projetos-v5/proj-04-mobilidade-ve.webp',
     metricsBadge: 'Recarga 22 a 120 kW',
   },
@@ -471,6 +502,7 @@ export const INTERACTIVE_SHOWCASE = {
     description: prod.description,
     metrics: prod.tag,
     image: prod.image,
+    icon: prod.icon,
     imageAlt: prod.headline,
     demoUrl: `/solucoes/${prod.slug}`,
     detailUrl: `/solucoes/${prod.slug}`,

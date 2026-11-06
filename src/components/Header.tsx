@@ -2,17 +2,19 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { SITE, SOCIAL_LINKS } from "@/config/site";
-import { ActionButton, LinkedInIcon } from "./icons";
+import { SOCIAL_LINKS } from "@/config/site";
+import { ActionButton, LinkedInIcon, InstagramIcon } from "./icons";
 
 const MOBILE_NAV_LINKS = [
   { num: "01", href: "#sobre", label: "Sobre a Renovera" },
   { num: "02", href: "#atuacao", label: "Áreas de Atuação" },
   { num: "03", href: "#diferenca", label: "Abordagem Integrada" },
-  { num: "04", href: "#projetos", label: "Projetos de Engenharia" },
+  { num: "04", href: "#projetos", label: "Portfólio Renô (9 Soluções)" },
   { num: "05", href: "#arquitetura", label: "Múltiplas Camadas" },
   { num: "06", href: "#experiencia", label: "Metodologia & Rigor" },
   { num: "07", href: "#contato", label: "Canais de Atendimento" },
+  { num: "08", href: "/solucoes", label: "Catálogo Técnico Completo" },
+  { num: "09", href: "/projetos", label: "Arquiteturas de Referência" },
 ];
 
 export function Header() {
@@ -87,10 +89,21 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className="social-media-link w-inline-block"
-              aria-label="LinkedIn Corporativo Renovera"
+              aria-label="LinkedIn Corporativo Renovera (@renoveraoficial)"
             >
               <div className="social-media-circle">
                 <LinkedInIcon />
+              </div>
+            </a>
+            <a
+              href={SOCIAL_LINKS.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-media-link w-inline-block"
+              aria-label="Instagram Oficial Renovera (@renoveraoficial)"
+            >
+              <div className="social-media-circle">
+                <InstagramIcon />
               </div>
             </a>
           </div>
@@ -106,7 +119,7 @@ export function Header() {
               <div className="nav-text">Atuação</div>
             </a>
             <a href="#projetos" className="nav-link w-inline-block">
-              <div className="nav-text">Projetos</div>
+              <div className="nav-text">Soluções</div>
             </a>
             <a href="#experiencia" className="nav-link w-inline-block">
               <div className="nav-text">Metodologia</div>
@@ -237,6 +250,16 @@ export function Header() {
             >
               <LinkedInIcon />
               <span>LinkedIn</span>
+            </a>
+            <a
+              href={SOCIAL_LINKS.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mobile-nav-social-pill"
+              tabIndex={menuOpen ? 0 : -1}
+            >
+              <InstagramIcon />
+              <span>Instagram</span>
             </a>
           </div>
         </div>

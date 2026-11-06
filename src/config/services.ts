@@ -52,7 +52,7 @@ export const servicesData: ServiceItem[] = [
     number: "02",
     title: "Renô Projetos",
     shortDescription: "Serviço completo turnkey de usinas solares: engenharia executiva, suprimentos Tier 1, montagem e homologação.",
-    fullDescription: "O Renô Projetos é o serviço 'ponta a ponta' da Renovera. Cuidamos de todas as etapas: engenharia executiva, aquisição dos melhores equipamentos mundiais, montagem com alto rigor técnico e homologação. Inclui a expertise preventiva do Renô Adviser™ para garantir conexão sem entraves.",
+    fullDescription: "O Renô Projetos é o serviço 'ponta a ponta' da Renovera. Cuidamos de todas as etapas: engenharia executiva, aquisição de equipamentos selecionados, montagem com rigor técnico e homologação. Inclui a expertise preventiva do Renô Adviser™ na condução do processo de conexão junto à concessionária.",
     heroHeadline: "Serviço Completo Turnkey de Usinas Fotovoltaicas",
     badge: "Solução Completa Turnkey",
     tag: "Usinas Completas",
@@ -82,8 +82,8 @@ export const servicesData: ServiceItem[] = [
     slug: "reno-performance",
     number: "03",
     title: "Renô Performance",
-    shortDescription: "Gestão ativa de dados e monitoramento inteligente 24/7 para máxima produtividade e rentabilidade da usina.",
-    fullDescription: "Serviço de gestão de dados contínuo que monitora o desempenho da sua usina solar para assegurar máxima produtividade e rentabilidade. Identifica quedas de geração causadas por sujidade, falhas em strings ou anomalias elétricas, emitindo alertas imediatos e iniciando diagnóstico remoto automatizado.",
+    shortDescription: "Gestão ativa de dados e monitoramento inteligente 24/7 para alta disponibilidade e desempenho operacional da usina.",
+    fullDescription: "Serviço de gestão de dados contínuo que monitora o desempenho da sua usina solar para assegurar alta disponibilidade e eficiência operacional. Identifica quedas de geração causadas por sujidade, falhas em strings ou anomalias elétricas, emitindo alertas imediatos e iniciando diagnóstico remoto automatizado.",
     heroHeadline: "Gestão de Dados e Monitoramento Inteligente 24/7",
     badge: "Gestão Ativa & Telemetria",
     tag: "Monitoramento 24/7",
@@ -122,7 +122,7 @@ export const servicesData: ServiceItem[] = [
     scope: [
       "Análise de viabilidade financeira completa (VPL, TIR e Payback dinâmico)",
       "Prospecção, negociação fundiária e locação de terrenos estratégicos",
-      "Engenharia, construção e homologação com garantia de acesso",
+      "Engenharia executiva, construção e condução integral do processo de homologação",
       "Monitoramento ativo e suporte contínuo à comercialização dos créditos",
       "Estruturação societária e jurídica de consórcios ou SPEs de energia",
       "Due diligence técnica para aquisição de usinas em operação"
