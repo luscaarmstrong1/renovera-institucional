@@ -2183,3 +2183,15 @@ body.has-mobile-menu-open {
   transform: scale(1.08) translateY(-6px) !important;
   filter: drop-shadow(0 16px 30px rgba(2, 36, 23, 0.45)) !important;
 }
+
+/* 18. Páginas Internas e Cookie Banner sempre interativos (sem depender do loader GSAP da Home) */
+html:has([data-internal-shell="true"]),
+html:not(:has(.loader)) {
+  cursor: auto !important;
+  pointer-events: auto !important;
+}
+
+[data-cookie-banner="true"],
+[data-cookie-banner="true"] * {
+  pointer-events: auto !important;
+}

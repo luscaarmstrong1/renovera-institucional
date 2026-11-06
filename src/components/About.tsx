@@ -16,9 +16,9 @@ const PILLARS_RENOVERA = [
     institution: "Auditoria de inversão de fluxo e conformidade ANEEL/PRODIST",
   },
   {
-    title: "Tecnologia & Gestão 24/7",
+    title: "Tecnologia & Telemetria",
     status: "Renô Performance",
-    institution: "Telemetria ativa, detecção preditiva de desvios e diagnóstico",
+    institution: "Monitoramento remoto, análise de desempenho e diagnóstico operacional",
   },
 ];
 
@@ -145,7 +145,7 @@ export function About() {
                 Fundada em 2020, a Renovera desenvolve soluções para o mercado de energia, integrando engenharia elétrica de precisão, análise regulatória profunda, gestão de ativos e tecnologia.
               </p>
               <p className="paragraph">
-                Nossa atuação contempla diferentes etapas do ciclo de um empreendimento energético: desde a viabilidade técnica e estruturação de projetos até a reversão de indeferimentos de conexão (Renô Adviser™), suprimento de equipamentos, montagem com parceiros homologados e monitoramento contínuo 24/7.
+                Nossa atuação contempla diferentes etapas do ciclo de um empreendimento energético: desde a viabilidade técnica e estruturação de projetos até a análise de indeferimentos de conexão (Renô Adviser™), suprimento de equipamentos, montagem com parceiros homologados e monitoramento operacional remoto.
               </p>
               <div className="insider-cta">
                 <a

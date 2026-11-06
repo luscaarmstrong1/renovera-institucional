@@ -6,15 +6,15 @@ import { SOCIAL_LINKS } from "@/config/site";
 import { ActionButton, LinkedInIcon, InstagramIcon } from "./icons";
 
 const MOBILE_NAV_LINKS = [
-  { num: "01", href: "#sobre", label: "Sobre a Renovera" },
-  { num: "02", href: "#atuacao", label: "Áreas de Atuação" },
-  { num: "03", href: "#diferenca", label: "Abordagem Integrada" },
-  { num: "04", href: "#projetos", label: "Portfólio Renô (9 Soluções)" },
-  { num: "05", href: "#arquitetura", label: "Múltiplas Camadas" },
-  { num: "06", href: "#experiencia", label: "Metodologia & Rigor" },
-  { num: "07", href: "#contato", label: "Canais de Atendimento" },
-  { num: "08", href: "/solucoes", label: "Catálogo Técnico Completo" },
-  { num: "09", href: "/projetos", label: "Arquiteturas de Referência" },
+  { num: "01", href: "/#sobre", label: "Sobre a Renovera" },
+  { num: "02", href: "/#atuacao", label: "Áreas de Atuação" },
+  { num: "03", href: "/#diferenca", label: "Abordagem Integrada" },
+  { num: "04", href: "/#arquitetura", label: "9 Soluções Renô (Interativo)" },
+  { num: "05", href: "/solucoes", label: "Catálogo & 6 Jornadas Comerciais" },
+  { num: "06", href: "/solucoes/reno-adviser", label: "Renô Adviser™ (Inversão de Fluxo)" },
+  { num: "07", href: "/integradores", label: "Área do Integrador Solar" },
+  { num: "08", href: "/blog", label: "Blog Técnico & Regulação" },
+  { num: "09", href: "/contato", label: "Canais de Atendimento" },
 ];
 
 export function Header() {
@@ -115,14 +115,14 @@ export function Header() {
             <a href="#sobre" className="nav-link w-inline-block">
               <div className="nav-text">Sobre</div>
             </a>
-            <a href="#atuacao" className="nav-link w-inline-block">
-              <div className="nav-text">Atuação</div>
+            <a href="/solucoes" className="nav-link w-inline-block">
+              <div className="nav-text">Soluções (9)</div>
             </a>
-            <a href="#projetos" className="nav-link w-inline-block">
-              <div className="nav-text">Soluções</div>
+            <a href="/integradores" className="nav-link w-inline-block">
+              <div className="nav-text">Integradores</div>
             </a>
-            <a href="#experiencia" className="nav-link w-inline-block">
-              <div className="nav-text">Metodologia</div>
+            <a href="/blog" className="nav-link w-inline-block">
+              <div className="nav-text">Blog</div>
             </a>
             <a href="#contato" className="nav-link w-inline-block">
               <div className="nav-text">Contato</div>
@@ -232,12 +232,12 @@ export function Header() {
 
         <div className="mobile-nav-footer">
           <a
-            href="#contato"
+            href="/solucoes/reno-adviser"
             className="mobile-nav-cta"
             tabIndex={menuOpen ? 0 : -1}
             onClick={handleNavClick}
           >
-            <span>Falar com um Especialista</span>
+            <span>Renô Adviser™ — Enviar Parecer</span>
             <span aria-hidden="true">→</span>
           </a>
           <div className="mobile-nav-socials">

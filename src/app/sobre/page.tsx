@@ -37,11 +37,14 @@ export default function SobrePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="text-xs font-bold uppercase tracking-widest text-[#FED15D]">
-              Resultados Verificados • Histórico Institucional Oficial
+              Histórico Institucional • Fonte: renovera.com.br
             </span>
             <h2 className="text-xl sm:text-2xl font-bold font-display text-white mt-1">
-              Métricas Oficiais Consolidadas ({SITE.officialStats.foundedYear} – Presente)
+              Indicadores Históricos Divulgados ({SITE.officialStats.foundedYear} – Presente)
             </h2>
+            <p className="text-xs text-[#D1DFD8] mt-1 max-w-2xl mx-auto">
+              Dados históricos institucionais consolidados conforme registros públicos oficiais da Renovera Energias Renováveis.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

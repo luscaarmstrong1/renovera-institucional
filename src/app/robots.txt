@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://renovera-institucional.vercel.app/sitemap.xml

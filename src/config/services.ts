@@ -82,24 +82,24 @@ export const servicesData: ServiceItem[] = [
     slug: "reno-performance",
     number: "03",
     title: "Renô Performance",
-    shortDescription: "Gestão ativa de dados e monitoramento inteligente 24/7 para alta disponibilidade e desempenho operacional da usina.",
-    fullDescription: "Serviço de gestão de dados contínuo que monitora o desempenho da sua usina solar para assegurar alta disponibilidade e eficiência operacional. Identifica quedas de geração causadas por sujidade, falhas em strings ou anomalias elétricas, emitindo alertas imediatos e iniciando diagnóstico remoto automatizado.",
-    heroHeadline: "Gestão de Dados e Monitoramento Inteligente 24/7",
+    shortDescription: "Gestão ativa de dados e monitoramento remoto para disponibilidade e desempenho operacional da usina.",
+    fullDescription: "Serviço de gestão de dados e acompanhamento remoto que monitora o desempenho da sua usina solar para apoiar a disponibilidade e a eficiência operacional. Identifica quedas de geração causadas por sujidade, falhas em strings ou anomalias elétricas, emitindo alertas e orientando o diagnóstico remoto conforme escopo contratado.",
+    heroHeadline: "Gestão de Dados e Monitoramento Remoto Inteligente",
     badge: "Gestão Ativa & Telemetria",
-    tag: "Monitoramento 24/7",
+    tag: "Monitoramento Remoto",
     color: "#033118",
     scope: [
-      "Monitoramento ativo 24/7 em tempo real de usinas solares",
-      "Detecção preditiva de sujidade, sombras parciais e perda de eficiência",
+      "Monitoramento remoto e acompanhamento operacional de usinas solares",
+      "Detecção de perdas por sujidade, sombras parciais e desvios de eficiência",
       "Diagnóstico remoto de inversores, trackers e componentes elétricos",
       "Controle de alarmística com chamados técnicos preventivos",
-      "Relatórios periódicos de produtividade e rentabilidade financeira",
+      "Relatórios periódicos de produtividade e desempenho operacional",
       "Análise de balanço energético e geração líquida injetada"
     ],
     deliverables: [
       "Dashboard de Telemetria Integrado",
-      "Painel de Alertas e Notificações em Tempo Real",
-      "Relatório Mensal de Performance e Curva de Geração",
+      "Painel de Alertas e Notificações Operacionais",
+      "Relatório Periódico de Performance e Curva de Geração",
       "Plano de Ação Corretiva para Manutenção Preventiva"
     ],
     normativeFramework: [

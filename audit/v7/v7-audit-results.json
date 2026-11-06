@@ -1,0 +1,671 @@
+{
+  "version": "V7 — Autonomous Corporate Platform",
+  "timestamp": "2026-11-06T13:22:36.963Z",
+  "baseUrl": "http://localhost:3197",
+  "consoleErrors": [],
+  "pageErrors": [],
+  "failedRequests": [],
+  "viewportHomeChecks": [
+    {
+      "viewport": "320-mobile-xs",
+      "width": 320,
+      "height": 640,
+      "innerWidth": 320,
+      "scrollWidth": 320,
+      "overflowPx": 0,
+      "brokenImages": []
+    },
+    {
+      "viewport": "360-mobile-s",
+      "width": 360,
+      "height": 800,
+      "innerWidth": 360,
+      "scrollWidth": 360,
+      "overflowPx": 0,
+      "brokenImages": []
+    },
+    {
+      "viewport": "375-mobile-m",
+      "width": 375,
+      "height": 812,
+      "innerWidth": 375,
+      "scrollWidth": 375,
+      "overflowPx": 0,
+      "brokenImages": []
+    },
+    {
+      "viewport": "390-mobile-l",
+      "width": 390,
+      "height": 844,
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "overflowPx": 0,
+      "brokenImages": []
+    },
+    {
+      "viewport": "430-mobile-xl",
+      "width": 430,
+      "height": 932,
+      "innerWidth": 430,
+      "scrollWidth": 430,
+      "overflowPx": 0,
+      "brokenImages": []
+    },
+    {
+      "viewport": "768-tablet-p",
+      "width": 768,
+      "height": 1024,
+      "innerWidth": 768,
+      "scrollWidth": 768,
+      "overflowPx": 0,
+      "brokenImages": []
+    },
+    {
+      "viewport": "820-tablet-l",
+      "width": 820,
+      "height": 1180,
+      "innerWidth": 820,
+      "scrollWidth": 820,
+      "overflowPx": 0,
+      "brokenImages": []
+    },
+    {
+      "viewport": "1024-laptop-s",
+      "width": 1024,
+      "height": 768,
+      "innerWidth": 1024,
+      "scrollWidth": 1024,
+      "overflowPx": 0,
+      "brokenImages": []
+    },
+    {
+      "viewport": "1280-laptop-m",
+      "width": 1280,
+      "height": 800,
+      "innerWidth": 1280,
+      "scrollWidth": 1280,
+      "overflowPx": 0,
+      "brokenImages": []
+    },
+    {
+      "viewport": "1440-desktop",
+      "width": 1440,
+      "height": 900,
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "overflowPx": 0,
+      "brokenImages": []
+    },
+    {
+      "viewport": "1920-fhd",
+      "width": 1920,
+      "height": 1080,
+      "innerWidth": 1920,
+      "scrollWidth": 1920,
+      "overflowPx": 0,
+      "brokenImages": []
+    }
+  ],
+  "viewportInternalChecks": [
+    {
+      "route": "/solucoes",
+      "width": 320,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/solucoes",
+      "width": 768,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/solucoes",
+      "width": 1440,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/solucoes/reno-adviser",
+      "width": 320,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/solucoes/reno-adviser",
+      "width": 768,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/solucoes/reno-adviser",
+      "width": 1440,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/integradores",
+      "width": 320,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/integradores",
+      "width": 768,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/integradores",
+      "width": 1440,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/blog",
+      "width": 320,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/blog",
+      "width": 768,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/blog",
+      "width": 1440,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/blog/inversao-de-fluxo",
+      "width": 320,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/blog/inversao-de-fluxo",
+      "width": 768,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/blog/inversao-de-fluxo",
+      "width": 1440,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/projetos",
+      "width": 320,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/projetos",
+      "width": 768,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/projetos",
+      "width": 1440,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/sobre",
+      "width": 320,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/sobre",
+      "width": 768,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/sobre",
+      "width": 1440,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/contato",
+      "width": 320,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/contato",
+      "width": 768,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/contato",
+      "width": 1440,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/cookies",
+      "width": 320,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/cookies",
+      "width": 768,
+      "status": 200,
+      "overflowPx": 0
+    },
+    {
+      "route": "/cookies",
+      "width": 1440,
+      "status": 200,
+      "overflowPx": 0
+    }
+  ],
+  "dailyMealsSync": [
+    {
+      "index": 0,
+      "pillText": "01 • Renô Adviser™",
+      "ariaSelected": "true",
+      "artVisible": true,
+      "activeTitle": "Renô Adviser™Assessoria Técnico-Regulatória"
+    },
+    {
+      "index": 1,
+      "pillText": "02 • Renô Projetos",
+      "ariaSelected": "true",
+      "artVisible": true,
+      "activeTitle": "Renô ProjetosSolução Completa Turnkey"
+    },
+    {
+      "index": 2,
+      "pillText": "03 • Renô Performance",
+      "ariaSelected": "true",
+      "artVisible": true,
+      "activeTitle": "Renô PerformanceGestão Ativa & Telemetria"
+    },
+    {
+      "index": 3,
+      "pillText": "04 • Renô Invest",
+      "ariaSelected": "true",
+      "artVisible": true,
+      "activeTitle": "Renô InvestEstruturação de Ativos"
+    },
+    {
+      "index": 4,
+      "pillText": "05 • Renô Protect",
+      "ariaSelected": "true",
+      "artVisible": true,
+      "activeTitle": "Renô ProtectSeguro Especializado"
+    },
+    {
+      "index": 5,
+      "pillText": "06 • Renô Supply",
+      "ariaSelected": "true",
+      "artVisible": true,
+      "activeTitle": "Renô SupplySuprimentos Técnicos"
+    },
+    {
+      "index": 6,
+      "pillText": "07 • Renô Engenharia",
+      "ariaSelected": "true",
+      "artVisible": true,
+      "activeTitle": "Renô EngenhariaEngenharia Multidisciplinar"
+    },
+    {
+      "index": 7,
+      "pillText": "08 • Renô Partner",
+      "ariaSelected": "true",
+      "artVisible": true,
+      "activeTitle": "Renô PartnerParceria Operacional"
+    },
+    {
+      "index": 8,
+      "pillText": "09 • Renô Energy Hub",
+      "ariaSelected": "true",
+      "artVisible": true,
+      "activeTitle": "Renô Energy HubInfraestrutura de Rede & VE"
+    }
+  ],
+  "commercialJourneysCheck": [
+    {
+      "journeyId": "integradores",
+      "bannerVisible": true,
+      "filteredCardsCount": 3
+    },
+    {
+      "journeyId": "empresas",
+      "bannerVisible": true,
+      "filteredCardsCount": 3
+    },
+    {
+      "journeyId": "investidores",
+      "bannerVisible": true,
+      "filteredCardsCount": 3
+    },
+    {
+      "journeyId": "condominios",
+      "bannerVisible": true,
+      "filteredCardsCount": 3
+    },
+    {
+      "journeyId": "residencias",
+      "bannerVisible": true,
+      "filteredCardsCount": 2
+    },
+    {
+      "journeyId": "eletropostos",
+      "bannerVisible": true,
+      "filteredCardsCount": 3
+    }
+  ],
+  "servicePagesCheck": [
+    {
+      "slug": "reno-adviser",
+      "status": 200,
+      "h1": "Renô Adviser™: Assessoria Especializada em Homologação e Conexão na Rede",
+      "hasProblem": true,
+      "hasHowWorks": true,
+      "hasSteps": true,
+      "hasDocs": true,
+      "hasNorms": true,
+      "hasFaq": true,
+      "dynamicFieldsCount": 6
+    },
+    {
+      "slug": "reno-projetos",
+      "status": 200,
+      "h1": "Renô Projetos: Serviço Completo Turnkey de Usinas Fotovoltaicas",
+      "hasProblem": true,
+      "hasHowWorks": true,
+      "hasSteps": true,
+      "hasDocs": true,
+      "hasNorms": true,
+      "hasFaq": true,
+      "dynamicFieldsCount": 5
+    },
+    {
+      "slug": "reno-performance",
+      "status": 200,
+      "h1": "Renô Performance: Gestão de Dados e Monitoramento Remoto Inteligente",
+      "hasProblem": true,
+      "hasHowWorks": true,
+      "hasSteps": true,
+      "hasDocs": true,
+      "hasNorms": true,
+      "hasFaq": true,
+      "dynamicFieldsCount": 4
+    },
+    {
+      "slug": "reno-invest",
+      "status": 200,
+      "h1": "Renô Invest: Investimento Estruturado em Ativos Solares",
+      "hasProblem": true,
+      "hasHowWorks": true,
+      "hasSteps": true,
+      "hasDocs": true,
+      "hasNorms": true,
+      "hasFaq": true,
+      "dynamicFieldsCount": 4
+    },
+    {
+      "slug": "reno-protect",
+      "status": 200,
+      "h1": "Renô Protect: Seguro Especializado para Usinas e Ativos Fotovoltaicos",
+      "hasProblem": true,
+      "hasHowWorks": true,
+      "hasSteps": true,
+      "hasDocs": true,
+      "hasNorms": true,
+      "hasFaq": true,
+      "dynamicFieldsCount": 4
+    },
+    {
+      "slug": "reno-supply",
+      "status": 200,
+      "h1": "Renô Supply: Central de Suprimentos com Avaliação Técnica Prévia",
+      "hasProblem": true,
+      "hasHowWorks": true,
+      "hasSteps": true,
+      "hasDocs": true,
+      "hasNorms": true,
+      "hasFaq": true,
+      "dynamicFieldsCount": 5
+    },
+    {
+      "slug": "reno-engenharia",
+      "status": 200,
+      "h1": "Renô Engenharia: Soluções Integradas em Infraestrutura, Automação e Tecnologia",
+      "hasProblem": true,
+      "hasHowWorks": true,
+      "hasSteps": true,
+      "hasDocs": true,
+      "hasNorms": true,
+      "hasFaq": true,
+      "dynamicFieldsCount": 4
+    },
+    {
+      "slug": "reno-partner",
+      "status": 200,
+      "h1": "Renô Partner: Programa de Parceria Operacional para Integradores Locais",
+      "hasProblem": true,
+      "hasHowWorks": true,
+      "hasSteps": true,
+      "hasDocs": true,
+      "hasNorms": true,
+      "hasFaq": true,
+      "dynamicFieldsCount": 4
+    },
+    {
+      "slug": "reno-energy-hub",
+      "status": 200,
+      "h1": "Renô Energy Hub: Infraestrutura Elétrica, Subestações e Mobilidade Elétrica",
+      "hasProblem": true,
+      "hasHowWorks": true,
+      "hasSteps": true,
+      "hasDocs": true,
+      "hasNorms": true,
+      "hasFaq": true,
+      "dynamicFieldsCount": 4
+    }
+  ],
+  "dynamicFormsCheck": [
+    {
+      "serviceSlug": "reno-adviser",
+      "dynamicFields": [
+        "utilityCompany",
+        "requestedPowerKw",
+        "utilityProtocol",
+        "denialReason",
+        "responseDeadline",
+        "previousAppeal"
+      ],
+      "fieldsCount": 6
+    },
+    {
+      "serviceSlug": "reno-projetos",
+      "dynamicFields": [
+        "cityState",
+        "monthlyConsumptionOrBill",
+        "propertyType",
+        "gridConnectionType",
+        "availableArea"
+      ],
+      "fieldsCount": 5
+    },
+    {
+      "serviceSlug": "reno-performance",
+      "dynamicFields": [
+        "installedPowerKwp",
+        "inverterBrandPlatform",
+        "cityState",
+        "currentIssueStatus"
+      ],
+      "fieldsCount": 4
+    },
+    {
+      "serviceSlug": "reno-invest",
+      "dynamicFields": [
+        "targetRegion",
+        "investmentObjective",
+        "capitalRange",
+        "landAvailability"
+      ],
+      "fieldsCount": 4
+    },
+    {
+      "serviceSlug": "reno-protect",
+      "dynamicFields": [
+        "cityState",
+        "installedPowerKwp",
+        "installationTopology",
+        "estimatedAssetValue"
+      ],
+      "fieldsCount": 4
+    },
+    {
+      "serviceSlug": "reno-supply",
+      "dynamicFields": [
+        "cityState",
+        "targetPowerKwp",
+        "structureType",
+        "preferredBrands",
+        "purchaseTimeline"
+      ],
+      "fieldsCount": 5
+    },
+    {
+      "serviceSlug": "reno-engenharia",
+      "dynamicFields": [
+        "facilityType",
+        "cityState",
+        "engineeringScope",
+        "voltageAndLoad"
+      ],
+      "fieldsCount": 4
+    },
+    {
+      "serviceSlug": "reno-partner",
+      "dynamicFields": [
+        "cnpj",
+        "serviceRegion",
+        "teamStructure",
+        "portfolioExperience"
+      ],
+      "fieldsCount": 4
+    },
+    {
+      "serviceSlug": "reno-energy-hub",
+      "dynamicFields": [
+        "cityState",
+        "availableVoltageAndDemand",
+        "targetChargerConfig",
+        "usageProfileAndDistance"
+      ],
+      "fieldsCount": 4
+    }
+  ],
+  "apiContactStatesCheck": {
+    "validationFailed": {
+      "status": 400,
+      "state": "validation_failed"
+    },
+    "blockedSpam": {
+      "status": 400,
+      "state": "blocked_spam"
+    },
+    "validLeadSubmission": {
+      "status": 200,
+      "state": "payload_validated_message_prepared",
+      "stored": false,
+      "delivered": false,
+      "leadId": null,
+      "hasPreparedLinks": true
+    }
+  },
+  "integratorsPageCheck": {
+    "status": 200,
+    "h1": "Engenharia regulatória, suprimentos técnicos e parceria operacional para escalar o seu negócio solar.",
+    "hasAdviser": true,
+    "hasSupply": true,
+    "hasPartner": true
+  },
+  "blogPagesCheck": [
+    {
+      "route": "/blog",
+      "status": 200,
+      "h1": "Conhecimento Técnico, Regulação ANEEL e Engenharia de Potência"
+    },
+    {
+      "route": "/blog/inversao-de-fluxo",
+      "status": 200,
+      "h1": "Inversão de Fluxo de Potência na Geração Distribuída: O que diz a REN 1.000 e como auditar tecnicamente"
+    },
+    {
+      "route": "/blog/homologacao-fotovoltaica",
+      "status": 200,
+      "h1": "Homologação Fotovoltaica em Baixa e Média Tensão: Documentação, Prazos e Conformidade Técnica"
+    },
+    {
+      "route": "/blog/eletropostos",
+      "status": 200,
+      "h1": "Infraestrutura para Eletropostos AC e DC: Engenharia de Demanda, NBR 17019 e Proteção Elétrica"
+    },
+    {
+      "route": "/blog/energia-solar-empresas",
+      "status": 200,
+      "h1": "Energia Solar para Empresas e Indústrias: Engenharia Executiva para Consumidores Grupo A e Grupo B"
+    },
+    {
+      "route": "/blog/investimento-em-usina-solar",
+      "status": 200,
+      "h1": "Investimento em Usina Solar: Como Avaliar Viabilidade Técnica, Terreno, Conexão e Gestão do Ativo"
+    },
+    {
+      "route": "/blog/equipamentos-fotovoltaicos",
+      "status": 200,
+      "h1": "Especificação e Compatibilidade de Equipamentos Fotovoltaicos: Módulos, Inversores e Proteções"
+    }
+  ],
+  "cookieBannerCheck": {
+    "bannerVisibleInitially": true,
+    "customizePanelOpened": true,
+    "bannerHiddenAfterAccept": true,
+    "storedConsentValid": true
+  },
+  "seoAnd404Check": {
+    "sitemapStatus": 200,
+    "sitemapContainsBlog": true,
+    "sitemapContainsIntegradores": true,
+    "sitemapContainsCookies": true,
+    "robotsStatus": 200,
+    "robotsHasSitemap": true,
+    "notFoundStatus404": 404
+  },
+  "performanceMetrics": {
+    "desktop_1440": {
+      "ttfbMs": 7,
+      "domContentLoadedMs": 54,
+      "loadEventMs": 319,
+      "fcpMs": 328,
+      "lcpMs": 328,
+      "cls": 0.0042
+    },
+    "mobile_375": {
+      "ttfbMs": 4,
+      "domContentLoadedMs": 26,
+      "loadEventMs": 252,
+      "fcpMs": 276,
+      "lcpMs": 276,
+      "cls": 0.0003
+    }
+  }
+}

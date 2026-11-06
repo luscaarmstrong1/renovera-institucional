@@ -7,9 +7,9 @@ import { InternalLayoutShell } from "@/components/InternalLayoutShell";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Arquiteturas de Referência & Metodologias Aplicadas | Renovera",
+  title: "Metodologias Técnicas Utilizada & Exemplos Ilustrativos | Renovera",
   description:
-    "Conheça as arquiteturas técnicas de referência e metodologias comprovadas da Renovera em pareceres de inversão de fluxo (Renô Adviser™), gestão 360º de usinas solares (Renô Projetos), eletropostos e O&M.",
+    "Conheça as metodologias técnicas utilizadas e exemplos técnicos ilustrativos da Renovera em pareceres de inversão de fluxo (Renô Adviser™), usinas solares (Renô Projetos), eletropostos e O&M.",
   alternates: {
     canonical: `${SITE.url}/projetos`,
   },
@@ -22,10 +22,10 @@ export default function ProjetosPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="badge-renovera mb-4">Acervo de Engenharia &amp; Metodologia</span>
           <h1 className="text-3xl sm:text-5xl font-bold font-display leading-tight">
-            Arquiteturas de Referência e Estudos Técnicos
+            Metodologias Técnicas Utilizadas e Exemplos Ilustrativos
           </h1>
           <p className="mt-4 text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Em respeito ao sigilo contratual (NDA) e à LGPD de nossos clientes e integradores parceiros, apresentamos nossas arquiteturas técnicas de referência vinculadas às métricas institucionais reais auditadas da Renovera.
+            Em respeito ao sigilo contratual (NDA) e à LGPD de nossos clientes e integradores parceiros, apresentamos as metodologias técnicas utilizadas e exemplos técnicos ilustrativos de cada frente de engenharia da Renovera.
           </p>
         </div>
       </section>
@@ -38,10 +38,10 @@ export default function ProjetosPage() {
               <ShieldCheck className="w-6 h-6 text-[#137A4E] flex-shrink-0 mt-0.5" />
               <div>
                 <h2 className="text-sm font-bold text-[#033118]">
-                  Compromisso de Honestidade Técnica e Confidencialidade
+                  Classificação Transparente: Metodologia Técnica Utilizada vs. Exemplo Técnico Ilustrativo
                 </h2>
                 <p className="text-xs text-[#40504C] mt-0.5 leading-relaxed">
-                  Cada ficha abaixo detalha o protocolo real de engenharia aplicado pela Renovera (Renô Adviser™, Renô Projetos, Renô Energy Hub, Renô Performance e Renô Engenharia) e os indicadores históricos verificados em nosso portfólio oficial.
+                  Não apresentamos estudos ilustrativos como cases comerciais nominais sem autorização formal do cliente. Cada ficha abaixo descreve o protocolo técnico real aplicado pela Renovera (Renô Adviser™, Renô Projetos, Renô Energy Hub, Renô Performance e Renô Engenharia) e as normas técnicas seguidas.
                 </p>
               </div>
             </div>

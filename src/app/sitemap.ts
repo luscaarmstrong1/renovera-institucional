@@ -1,38 +1,51 @@
 import { MetadataRoute } from "next";
-import { servicesData } from "@/config/services";
+import { SITE, RENO_PRODUCTS } from "@/config/site";
 import { projectsData } from "@/config/projects";
+import { BLOG_ARTICLES } from "@/config/blog";
+
+const RELEASE_DATE = "2026-05-31T00:00:00.000Z";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://renovera-institucional.vercel.app";
+  const baseUrl = SITE.url;
 
   const staticRoutes = [
     "",
     "/sobre",
     "/solucoes",
+    "/integradores",
     "/projetos",
+    "/blog",
     "/contato",
     "/privacidade",
-    "/termos"
+    "/cookies",
+    "/termos",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
+    lastModified: RELEASE_DATE,
     changeFrequency: "monthly" as const,
-    priority: route === "" ? 1.0 : 0.8
+    priority: route === "" ? 1.0 : route === "/solucoes" || route === "/integradores" ? 0.9 : 0.8,
   }));
 
-  const serviceRoutes = servicesData.map((svc) => ({
-    url: `${baseUrl}/solucoes/${svc.slug}`,
-    lastModified: new Date(),
+  const serviceRoutes = RENO_PRODUCTS.map((prod) => ({
+    url: `${baseUrl}/solucoes/${prod.slug}`,
+    lastModified: RELEASE_DATE,
     changeFrequency: "monthly" as const,
-    priority: 0.9
+    priority: prod.slug === "reno-adviser" ? 0.95 : 0.9,
   }));
 
   const projectRoutes = projectsData.map((prj) => ({
     url: `${baseUrl}/projetos/${prj.slug}`,
-    lastModified: new Date(),
+    lastModified: RELEASE_DATE,
     changeFrequency: "monthly" as const,
-    priority: 0.7
+    priority: 0.75,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...projectRoutes];
+  const blogRoutes = BLOG_ARTICLES.map((art) => ({
+    url: `${baseUrl}/blog/${art.slug}`,
+    lastModified: `${art.publishedAt}T00:00:00.000Z`,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...projectRoutes, ...blogRoutes];
 }

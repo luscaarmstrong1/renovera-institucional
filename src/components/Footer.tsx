@@ -76,12 +76,22 @@ export function Footer() {
               </a>
               <a href="/solucoes" className="shipping-link w-inline-block">
                 <div className="shipping-link-wrap">
-                  <div className="shipping-link-text">Portfólio Renô (9 Soluções)</div>
+                  <div className="shipping-link-text">Catálogo Renô (9 Soluções)</div>
+                </div>
+              </a>
+              <a href="/integradores" className="shipping-link w-inline-block">
+                <div className="shipping-link-wrap">
+                  <div className="shipping-link-text">Área do Integrador Solar</div>
+                </div>
+              </a>
+              <a href="/blog" className="shipping-link w-inline-block">
+                <div className="shipping-link-wrap">
+                  <div className="shipping-link-text">Blog Técnico &amp; Regulação</div>
                 </div>
               </a>
               <a href="/projetos" className="shipping-link w-inline-block">
                 <div className="shipping-link-wrap">
-                  <div className="shipping-link-text">Arquiteturas &amp; Estudos Técnicos</div>
+                  <div className="shipping-link-text">Metodologias &amp; Estudos</div>
                 </div>
               </a>
               <a href="/contato" className="shipping-link w-inline-block">
@@ -93,6 +103,13 @@ export function Footer() {
                 <div className="shipping-link-wrap">
                   <div className="shipping-link-text">
                     Política de Privacidade (LGPD)
+                  </div>
+                </div>
+              </a>
+              <a href="/cookies" className="shipping-link w-inline-block">
+                <div className="shipping-link-wrap">
+                  <div className="shipping-link-text">
+                    Política de Cookies
                   </div>
                 </div>
               </a>

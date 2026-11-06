@@ -7,7 +7,7 @@ const SPECIALTIES_RENOVERA = {
     { title: "Consultoria Regulatória", detail: "Análise de estudos de conexão, inversão de fluxo e orçamentos junto a concessionárias" },
     { title: "Engenharia Elétrica MT/BT", detail: "Projetos em média e baixa tensão, subestações abrigadas e estudos de proteção" },
     { title: "Energia Solar Fotovoltaica", detail: "Dimensionamento, engenharia executiva e implantação turnkey de usinas" },
-    { title: "Gestão e Monitoramento 24/7", detail: "Acompanhamento de ativos, análise de desempenho e diagnóstico remoto automatizado" },
+    { title: "Gestão e Monitoramento Remoto", detail: "Acompanhamento de ativos, análise de desempenho e diagnóstico operacional remoto" },
     { title: "Eletropostos & Mobilidade", detail: "Dimensionamento e infraestrutura elétrica para recarga de veículos elétricos (VE)" },
     { title: "Automação & Soluções Inteligentes", detail: "Instrumentação, controle de injeção, supervisão predial e eficiência energética" },
   ]
@@ -221,7 +221,7 @@ function StatementCardsList({ mobile = false }: { mobile?: boolean }) {
           <div className="statement-card-paragraph-wrap">
             <p className="paragraph center-align">
               <span>
-                Monitoramento inteligente 24/7 de usinas solares,
+                Monitoramento remoto e gestão de usinas solares,
                 <br />
               </span>
               <span>
@@ -376,7 +376,7 @@ export function Specialties() {
                   color: "var(--color-text-secondary)",
                 }}
               >
-                Consultoria Regulatória • Engenharia Elétrica • Usinas Solares • Gestão 24/7 • Eletropostos • Automação
+                Consultoria Regulatória • Engenharia Elétrica • Usinas Solares • Monitoramento Remoto • Eletropostos • Automação
               </span>
             </div>
             <div className="complementary-pills">

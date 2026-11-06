@@ -189,12 +189,12 @@ export const RENO_PRODUCTS: RenoProduct[] = [
     name: "Renô Performance",
     badge: "Gestão Ativa & Telemetria",
     category: "Monitoramento e Inteligência Operacional",
-    headline: "Gestão de Dados e Monitoramento Inteligente 24/7",
+    headline: "Gestão de Dados e Monitoramento Remoto Inteligente",
     description:
-      "Serviço de gestão de dados contínuo que monitora o desempenho da sua usina solar para assegurar alta disponibilidade e eficiência operacional. Identifica quedas de geração causadas por sujidade, falhas em strings ou anomalias elétricas, emitindo alertas imediatos e iniciando diagnóstico remoto automatizado.",
+      "Serviço de gestão de dados e acompanhamento remoto que monitora o desempenho da sua usina solar para apoiar a disponibilidade e a eficiência operacional. Identifica quedas de geração causadas por sujidade, falhas em strings ou anomalias elétricas, emitindo alertas e orientando o diagnóstico remoto.",
     highlights: [
-      "Monitoramento ativo 24/7 em tempo real",
-      "Detecção preditiva de sujidade, sombras e perdas",
+      "Monitoramento remoto e acompanhamento operacional",
+      "Detecção de perdas por sujidade, sombras e desvios elétricos",
       "Diagnóstico remoto de inversores e componentes",
       "Relatórios periódicos de produtividade e desempenho energético"
     ],
@@ -202,14 +202,14 @@ export const RENO_PRODUCTS: RenoProduct[] = [
     idealFor: ["Empresas", "Investidores"],
     deliverables: [
       "Dashboard de Telemetria Integrado",
-      "Painel de Alertas em Tempo Real",
-      "Relatório Mensal de Performance e Curva de Geração",
+      "Painel de Alertas Operacionais",
+      "Relatório Periódico de Performance e Curva de Geração",
       "Plano de Ação Corretiva para Manutenção Preventiva"
     ],
     image: "/assets/renovera/produtos/reno-03-performance.webp",
     icon: "/assets/renovera/solucoes/icon-reno-performance.svg",
     slug: "reno-performance",
-    tag: "Monitoramento 24/7"
+    tag: "Monitoramento Remoto"
   },
   {
     id: "reno-invest",
@@ -396,7 +396,7 @@ export const COMPARISON_ITEMS: ComparisonRow[] = [
   },
   {
     isolated: 'Instalação entregue sem suporte de longo prazo',
-    integrated: 'Monitoramento contínuo 24/7 com Renô Performance',
+    integrated: 'Monitoramento remoto e gestão ativa com Renô Performance',
   },
   {
     isolated: 'Dificuldade de escala para o integrador local',
@@ -461,12 +461,12 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     category: '03 — Automação e Controle',
     projectType: 'Telemetria e Diagnóstico Remoto',
     description:
-      'Sistemas de supervisão contínua 24/7, controladores industriais para limitação dinâmica de injeção reversa, monitoramento de grandezas elétricas e diagnóstico operacional remoto.',
-    technologies: ['Renô Performance', 'Telemetria 24/7', 'Zero Export', 'Modbus TCP'],
+      'Sistemas de supervisão remota, controladores industriais para limitação dinâmica de injeção reversa, monitoramento de grandezas elétricas e diagnóstico operacional remoto.',
+    technologies: ['Renô Performance', 'Telemetria Remota', 'Zero Export', 'Modbus TCP'],
     siteUrl: '/projetos/arquitetura-telemetria-controle-zero-export',
     siteDomain: 'Monitoramento & Controle Ativo',
     image: '/assets/renovera/projetos-v5/proj-03-automacao.webp',
-    metricsBadge: 'Gestão Ativa 24/7',
+    metricsBadge: 'Gestão Ativa & Telemetria',
   },
   {
     id: 'mobilidade-recarga',

@@ -13,14 +13,16 @@ interface InternalLayoutShellProps {
 export function InternalLayoutShell({ children, activePath }: InternalLayoutShellProps) {
   const navItems = [
     { href: "/", label: "Início" },
-    { href: "/sobre", label: "Sobre a Renovera" },
+    { href: "/sobre", label: "Sobre" },
     { href: "/solucoes", label: "Soluções Renô (9)" },
-    { href: "/projetos", label: "Arquiteturas & Estudos" },
+    { href: "/integradores", label: "Integradores" },
+    { href: "/projetos", label: "Metodologias" },
+    { href: "/blog", label: "Blog Técnico" },
     { href: "/contato", label: "Contato" },
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F8F8F5] text-[#111815]">
+    <div data-internal-shell="true" className="min-h-screen flex flex-col bg-[#F8F8F5] text-[#111815]">
       <header className="sticky top-0 z-50 bg-[#022417]/95 backdrop-blur-md border-b border-[#FED15D]/20 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
           <Link
@@ -47,7 +49,7 @@ export function InternalLayoutShell({ children, activePath }: InternalLayoutShel
             </div>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-6" aria-label="Navegação institucional">
+          <nav className="hidden lg:flex items-center gap-5" aria-label="Navegação institucional">
             {navItems.map((item) => {
               const isActive =
                 activePath === item.href ||
@@ -79,8 +81,8 @@ export function InternalLayoutShell({ children, activePath }: InternalLayoutShel
             </a>
           </div>
         </div>
-        {/* Mobile quick nav bar */}
-        <div className="md:hidden border-t border-white/10 bg-[#033118] px-4 py-2 overflow-x-auto">
+        {/* Mobile/Tablet quick nav bar */}
+        <div className="lg:hidden border-t border-white/10 bg-[#033118] px-4 py-2 overflow-x-auto">
           <div className="flex items-center gap-4 whitespace-nowrap">
             {navItems.map((item) => {
               const isActive =
@@ -102,7 +104,9 @@ export function InternalLayoutShell({ children, activePath }: InternalLayoutShel
         </div>
       </header>
 
-      <main className="flex-1">{children}</main>
+      <main className="flex-1" id="principal">
+        {children}
+      </main>
 
       <footer className="bg-[#022417] text-white border-t border-[#FED15D]/20 pt-14 pb-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -123,7 +127,7 @@ export function InternalLayoutShell({ children, activePath }: InternalLayoutShel
               </div>
               <p className="text-xs sm:text-sm text-[#D1DFD8] leading-relaxed max-w-md">
                 {SITE.heroHeadline} Desde {SITE.officialStats.foundedYear} estruturando projetos elétricos,
-                consultoria regulatória (ANEEL/PRODIST) e gestão 360º de ativos de geração solar.
+                consultoria regulatória (ANEEL/PRODIST) e gestão de ativos de geração solar.
               </p>
               <div className="text-xs text-[#FED15D] font-semibold">
                 Sede: {SITE.location} • {SITE.coverage}
@@ -147,12 +151,22 @@ export function InternalLayoutShell({ children, activePath }: InternalLayoutShel
                 </li>
                 <li>
                   <Link href="/solucoes" className="hover:text-[#FED15D] transition-colors">
-                    Portfólio Renô (9)
+                    Catálogo Renô (9)
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/integradores" className="hover:text-[#FED15D] transition-colors">
+                    Área do Integrador
                   </Link>
                 </li>
                 <li>
                   <Link href="/projetos" className="hover:text-[#FED15D] transition-colors">
-                    Estudos Técnicos
+                    Metodologias
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog" className="hover:text-[#FED15D] transition-colors">
+                    Blog Técnico
                   </Link>
                 </li>
                 <li>
@@ -163,6 +177,11 @@ export function InternalLayoutShell({ children, activePath }: InternalLayoutShel
                 <li>
                   <Link href="/privacidade" className="hover:text-[#FED15D] transition-colors">
                     Privacidade (LGPD)
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/cookies" className="hover:text-[#FED15D] transition-colors">
+                    Política de Cookies
                   </Link>
                 </li>
                 <li>

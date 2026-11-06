@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { SITE, SOCIAL_LINKS } from "@/config/site";
 import { Origem } from "@/lib/origem";
+import { CookieConsentBanner } from "@/components/CookieConsentBanner";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -10,19 +11,19 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Renovera Energias Renováveis | Engenharia, Energia e Soluções Técnicas",
+  title: "Renovera Energias Renováveis | Engenharia, Energia Solar e Consultoria Regulatória",
   description: SITE.seo.description,
   applicationName: SITE.fullName,
   keywords: [
     "Renovera Energias Renováveis",
+    "Renô Adviser",
+    "Inversão de Fluxo MMGD",
+    "Consultoria Regulatória ANEEL",
     "Engenharia Elétrica",
     "Energia Solar Fotovoltaica",
-    "Consultoria Regulatória ANEEL",
-    "Inversão de Fluxo MMGD",
     "Eletropostos Recarga VE",
     "Projetos Média e Baixa Tensão",
     "Subestações Abrigadas",
-    "Zero Export Automação",
   ],
   icons: {
     icon: "/assets/brand/favicon.svg",
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: `${SITE.url}/` },
   openGraph: {
-    title: "Renovera Energias Renováveis | Engenharia, Energia e Soluções Técnicas",
+    title: "Renovera Energias Renováveis | Engenharia, Energia Solar e Consultoria Regulatória",
     description: SITE.seo.description,
     url: `${SITE.url}/`,
     siteName: SITE.fullName,
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Renovera Energias Renováveis | Engenharia, Energia e Soluções Técnicas",
+    title: "Renovera Energias Renováveis | Engenharia, Energia Solar e Consultoria Regulatória",
     description: SITE.seo.description,
     images: [`${SITE.url}/og.jpg`],
   },
@@ -99,6 +100,7 @@ export default function RootLayout({
         </a>
         <Origem />
         {children}
+        <CookieConsentBanner />
       </body>
     </html>
   );

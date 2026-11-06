@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { SITE, SOCIAL_LINKS } from "@/config/site";
 import { BriefcaseIcon, LinkedInIcon, MailIcon, PinIcon } from "./icons";
 
@@ -89,7 +90,7 @@ export function Contact() {
                         <LinkedInIcon className="circulo-icone" />
                         <span className="circulo-rotulo">LinkedIn</span>
                         <span className="circulo-sub">
-                          Renovera Energias
+                          @renoveraoficial
                         </span>
                       </div>
                     </div>
@@ -134,17 +135,19 @@ export function Contact() {
                 </div>
 
                 <div data-inertia-item="" className="payment-method-item-outer">
-                  <div
-                    data-payment-item=""
-                    data-inertia-item-child=""
-                    className="payment-method-item _4"
-                  >
-                    <div className="circulo-miolo">
-                      <PinIcon className="circulo-icone" />
-                      <span className="circulo-rotulo">Sede</span>
-                      <span className="circulo-sub">{SITE.location}</span>
+                  <Link href="/solucoes" className="circulo-link">
+                    <div
+                      data-payment-item=""
+                      data-inertia-item-child=""
+                      className="payment-method-item _4"
+                    >
+                      <div className="circulo-miolo">
+                        <PinIcon className="circulo-icone" />
+                        <span className="circulo-rotulo">9 Soluções</span>
+                        <span className="circulo-sub">Formulários Técnicos →</span>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
 
                 <div className="payment-signature-days is-mobile">
