@@ -13,25 +13,15 @@ export function Hero() {
           <div className="stage-content">
             <div className="stage-logo">
               <div data-load-stage-logo="" className="stage-logo-svg flex items-center justify-center">
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-[#033118] border border-[#FED15D] p-2 flex items-center justify-center shadow-lg">
-                    <Image
-                      src="/assets/brand/favicon.svg"
-                      alt="Renovera Energias Renováveis"
-                      width={44}
-                      height={44}
-                      className="object-contain"
-                      priority
-                    />
-                  </div>
-                  <div className="flex flex-col text-left">
-                    <span className="text-3xl sm:text-4xl font-bold tracking-tight text-white font-display">
-                      RENOVERA
-                    </span>
-                    <span className="text-xs uppercase tracking-widest text-[#FED15D] font-semibold">
-                      Energias Renováveis
-                    </span>
-                  </div>
+                <div className="flex flex-col items-center gap-3">
+                  <Image
+                    src="/assets/brand/logo-renovera-white.png"
+                    alt="Renovera — Inteligência em Energia"
+                    width={460}
+                    height={100}
+                    className="h-16 sm:h-20 md:h-24 w-auto object-contain drop-shadow-lg"
+                    priority
+                  />
                 </div>
               </div>
             </div>

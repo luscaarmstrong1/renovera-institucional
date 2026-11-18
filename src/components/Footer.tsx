@@ -170,9 +170,15 @@ export function Footer() {
 
         <div
           id="w-node-_9cf1d991-93c8-9876-0a84-cf07ed027319-0ac01850"
-          className="footer-logo mobile flex items-center justify-center font-bold text-4xl text-white font-display"
+          className="footer-logo mobile flex items-center justify-center py-4"
         >
-          RENOVERA
+          <Image
+            src="/assets/brand/logo-renovera-white.png"
+            alt="Renovera — Inteligência em Energia"
+            width={280}
+            height={60}
+            className="h-12 w-auto object-contain opacity-90"
+          />
         </div>
 
         <div
@@ -191,8 +197,14 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="footer-logo desktop flex items-center justify-center font-bold text-7xl text-white/20 font-display select-none pointer-events-none">
-        RENOVERA ENERGIAS RENOVÁVEIS
+      <div className="footer-logo desktop flex items-center justify-center py-8 select-none pointer-events-none">
+        <Image
+          src="/assets/brand/logo-renovera-white.png"
+          alt="Renovera — Inteligência em Energia"
+          width={640}
+          height={140}
+          className="h-24 w-auto object-contain opacity-25"
+        />
       </div>
     </footer>
   );
